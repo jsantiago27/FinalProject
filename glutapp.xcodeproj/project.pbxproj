@@ -35,6 +35,7 @@
 		1799B7E41E5E3A83006D7CBD /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		1799B7E61E5ECD67006D7CBD /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		1799B7E71E5ECD67006D7CBD /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,
 				173FEF151AA63B1B006CCB85 /* OpenGL.framework */,
 				1799B7E61E5ECD67006D7CBD /* App.cpp */,
+				904227F9218B74F50060F774 /* Rect.h */,
 				1799B7E71E5ECD67006D7CBD /* App.h */,
 				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
 				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
