@@ -1,9 +1,16 @@
-#include "App.h"
+#include "../includes/App.h"
 
 App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w, h){
     // Initialize state variables
     mx = 0.0;
     my = 0.0;
+    
+    // initialize my Rects;
+    myRects = new Rect();
+    
+    myRects->addRect(0.0, 0.0, 0.3, 0.3);
+    myRects->addRect(0.5, 0.5, 0.3, 0.3);
+    myRects->addRect(-0.4, -0.5, 0.3, 0.3);
 }
 
 void App::draw() {
@@ -43,6 +50,11 @@ void App::draw() {
     glVertex2f(mx, my + 0.05f);
     
     glEnd();
+    
+    
+    myRects->draw();
+    
+    
     
     // We have been drawing everything to the back buffer
     // Swap the buffers to see the result of what we drew

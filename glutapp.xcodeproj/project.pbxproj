@@ -12,6 +12,8 @@
 		173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF171AA63B22006CCB85 /* GLUT.framework */; };
 		1799B7E51E5E3A83006D7CBD /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		1799B7E81E5ECD67006D7CBD /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1799B7E61E5ECD67006D7CBD /* App.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DC5218B793400DDEFF2 /* Shape.cpp */; };
+		5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,9 @@
 		1799B7E41E5E3A83006D7CBD /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		1799B7E61E5ECD67006D7CBD /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		1799B7E71E5ECD67006D7CBD /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		5F5C5DC5218B793400DDEFF2 /* Shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		5F5C5DC6218B793400DDEFF2 /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,13 +61,10 @@
 			children = (
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,
 				173FEF151AA63B1B006CCB85 /* OpenGL.framework */,
-				1799B7E61E5ECD67006D7CBD /* App.cpp */,
-				904227F9218B74F50060F774 /* Rect.h */,
-				1799B7E71E5ECD67006D7CBD /* App.h */,
-				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
-				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
-				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
+				5F5C5DC9218B97AC00DDEFF2 /* includes */,
+				5F5C5DC8218B97A000DDEFF2 /* src */,
 				173FEF021AA63A07006CCB85 /* Products */,
+				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +74,28 @@
 				173FEF011AA63A07006CCB85 /* glutapp */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5F5C5DC8218B97A000DDEFF2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
+				1799B7E61E5ECD67006D7CBD /* App.cpp */,
+				5F5C5DC5218B793400DDEFF2 /* Shape.cpp */,
+				5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5F5C5DC9218B97AC00DDEFF2 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
+				1799B7E71E5ECD67006D7CBD /* App.h */,
+				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
+				904227F9218B74F50060F774 /* Rect.h */,
+			);
+			path = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +157,8 @@
 				1799B7E81E5ECD67006D7CBD /* App.cpp in Sources */,
 				173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */,
 				1799B7E51E5E3A83006D7CBD /* GlutApp.cpp in Sources */,
+				5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */,
+				5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
