@@ -12,7 +12,7 @@
 
 ### Things Needed to be Implemented
 --- 
-- [ ] Choose which game we want
+- [x] Choose which game we want
 - [ ] Add a standard template for the game
 
 ### Alan Test
