@@ -3,7 +3,8 @@
 ### Recent Changes 
 - October 31, 2018
     - Added Final Project Repository
-
+- November 1, 2018
+    - Added Rect.h (Rectangle Header)
 
 ### Known Bugs
 --- 
