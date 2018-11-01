@@ -2,7 +2,7 @@
 ---
 ### Recent Changes 
 - October 31, 2018
-    - Added Final Project Repository
+    - Added Final Project Repository (REEE)
 
 
 ### Known Bugs
