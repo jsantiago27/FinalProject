@@ -21,16 +21,9 @@ void App::draw() {
     // Set Color
     glColor3d(1.0, 1.0, 1.0);
     
-    // Draw some points
-    glBegin(GL_POINTS);
-    
-    glVertex2f(0.5, 0.5);
-    glVertex2f(0.5, -0.5);
-    glVertex2f(-0.5, -0.5);
-    glVertex2f(-0.5, 0.5);
-    
-    glEnd();
-    
+    //REctangle draw Test
+    rectangles.push_back(new Rect(0,0,0.1,0.1));
+    rectangles[0]->draw();
     // Draw a yellow cross
     glColor3d(1.0, 1.0, 0.0);
     

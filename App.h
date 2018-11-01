@@ -3,10 +3,12 @@
 
 #include "GlutApp.h"
 #include "Rect.h"
+#include <vector>
 class App: public GlutApp {
     // Maintain app state here
     float mx;
     float my;
+    std::vector<Rect*> rectangles;
 public:
     // Constructor, to initialize state
     App(const char* label, int x, int y, int w, int h);

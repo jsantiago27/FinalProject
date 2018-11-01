@@ -75,6 +75,16 @@ public:
     std::string getLabel() {
         return this->label;
     }
+    void draw(){
+        glBegin(GL_POINTS);
+        
+        glVertex2f(x, y);
+        glVertex2f(x+width, y);
+        glVertex2f(x+width, y-height);
+        glVertex2f(x, y-height);
+        
+        glEnd();
+    }
     ~Rect() {
         this->x = 0;
         this->y = 0;
