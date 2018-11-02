@@ -4,9 +4,6 @@
 #include "GlutApp.h"
 #include "Rect.h"
 #include "Circle.h"
-
-
-
 #include <vector>
 class App: public GlutApp {
     // Maintain app state here

@@ -50,7 +50,8 @@ void App::draw() {
     
     glEnd();
     
-    
+    glColor3d(1.0, 0.0, 1.0);
+
     myRects->draw();
     myCircs->draw();
     
