@@ -12,6 +12,8 @@
             - Also Made it a child of Shape
         - Created a Shape class.
             - it has pure virtual functions (contains and draw)
+    * Time: 5:18pm
+        - Added Circle Class
 
 ### Known Bugs
 --- 
