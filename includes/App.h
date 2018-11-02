@@ -17,8 +17,9 @@ public:
     App(const char* label, int x, int y, int w, int h);
     
     // These are the events we want to handle
+    void idle();
     void draw();
-    void keyPress(unsigned char key);
+    void keyPress(unsigned char key, float x, float y);
     void mouseDown(float x, float y);
     void mouseDrag(float x, float y);
 };

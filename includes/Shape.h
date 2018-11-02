@@ -26,6 +26,11 @@ public:
     
     // Pure virtual method for contains function
     virtual bool contains(float mx, float my) const = 0;
+    
+    // pure virtual method for idle function
+    virtual void idle() = 0;
+    
+    virtual void keyPress(unsigned char key, float x, float y) = 0;
 };
 
 #endif /* Shape_hpp */

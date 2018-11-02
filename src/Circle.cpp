@@ -8,9 +8,9 @@
 
 #include "../includes/Circle.h"
 
-Circle::Circle() : x(0), y(0), rad(0.03) {}
+Circle::Circle() : x(0), y(0), rad(0.03), r(1), g(1), b(1) {}
 
-Circle::Circle(float x, float y, float radius) : x(x), y(y), rad(radius) {}
+Circle::Circle(float x, float y, float radius) : x(x), y(y), rad(radius), r(1), g(1), b(1) {}
 
 void Circle::addCircle() {
     myCircles.push_back(new Circle());
@@ -45,10 +45,14 @@ void Circle::setRadius(float newRad) {
 // Draw function
 void Circle::draw() const {
     for (int i = 0; i < myCircles.size(); i++) {
-        float   posX = myCircles[i]->getPosX(),
+        float   red = myCircles[i]->getRed(),
+                blue = myCircles[i]->getBlue(),
+                green = myCircles[i]->getGreen(),
+                posX = myCircles[i]->getPosX(),
                 posY = myCircles[i]->getPosY(),
                 rad = myCircles[i]->getRad();
         
+        glColor3f(red, green, blue);
         glBegin(GL_POLYGON);
         for (float theta = 0; theta < 2 * M_PI; theta += 0.01) {
             
@@ -60,6 +64,36 @@ void Circle::draw() const {
     
     glutPostRedisplay();
 }
+
+void Circle::idle() {
+    
+    glutPostRedisplay();
+}
+
+void Circle::keyPress(unsigned char key, float x, float y) {
+    glutPostRedisplay();
+}
+
+float Circle::getRed() const {
+    return this->r;
+}
+float Circle::getGreen() const {
+    return this->g;
+}
+float Circle::getBlue() const {
+    return this->b;
+}
+
+void Circle::setRed(float red) {
+    this->r = red;
+}
+void Circle::setGreen(float green) {
+    this->g = green;
+}
+void Circle::setBlue(float blue) {
+    this->b = blue;
+}
+
 
 // Miscellaneous functions
 bool Circle::contains(float mx, float my) const {

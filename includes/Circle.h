@@ -19,8 +19,15 @@ class Circle : public Shape {
 private:
     std::vector<Circle*> myCircles;
     
+    // Position of the circle
     float x;
     float y;
+    
+    // Colors for the circle class
+    float r;
+    float g;
+    float b;
+    
     float rad;
 
 public:
@@ -32,11 +39,17 @@ public:
     float getPosX() const;
     float getPosY() const;
     float getRad() const;
+    float getRed() const;
+    float getGreen() const;
+    float getBlue() const;
     
     // Setter Functions
     void setX(float newX);
     void setY(float newY);
     void setRadius(float newRad);
+    void setRed(float red);
+    void setGreen(float green);
+    void setBlue(float blue);
     
     // Add circle functions
     void addCircle();
@@ -45,8 +58,13 @@ public:
     // Draw function
     void draw() const;
     
+    // Idle functions
+    void idle();
+    
     // Miscellaneous functions
     bool contains(float mx, float my) const;
+    
+    void keyPress(unsigned char key, float x, float y);
 
     
 };

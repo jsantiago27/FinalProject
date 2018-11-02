@@ -12,12 +12,7 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     myCircs = new Circle();
     
     myRects->addRect(0.0, 0.0, 0.3, 0.3);
-    myRects->addRect(0.5, 0.5, 0.3, 0.3);
-    myRects->addRect(-0.4, -0.5, 0.3, 0.3);
-    
-    myCircs->addCircle();
-    myCircs->addCircle(-0.6, 0.3, 0.5);
-    myCircs->addCircle(0.5, -0.3, 0.5);
+    myCircs->addCircle(-0.6, 0.3, 0.2);
     
     
 }
@@ -80,9 +75,20 @@ void App::mouseDrag(float x, float y){
     redraw();
 }
 
-void App::keyPress(unsigned char key) {
+void App::keyPress(unsigned char key, float x, float y) {
     if (key == 27){
         // Exit the app when Esc key is pressed
         exit(0);
     }
+    
+    myRects->keyPress(key, x, y);
+}
+
+
+void App::idle() {
+    
+    myRects->idle();
+    myCircs->idle();
+    
+    redraw();
 }

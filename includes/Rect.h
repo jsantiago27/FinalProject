@@ -5,6 +5,13 @@
 #include <vector>
 #include "Shape.h"
 
+#define NOT_MOVING      0
+#define MOVING_UP       1
+#define MOVING_DOWN     2
+#define MOVING_LEFT     3
+#define MOVING_RIGHT    4
+
+
 class Rect : public Shape {
     
 private:
@@ -16,8 +23,22 @@ private:
     float y;
     float width;
     float height;
+    
+    // Colors for the rectangle class
+    float r;
+    float g;
+    float b;
+    
     bool checked;
     std::string label;
+    
+    // misc
+    //  0 = not moving
+    //  1 = up
+    //  2 = down
+    //  3 = left
+    //  4 = right
+    short moving;
     
 public:
     
@@ -34,26 +55,37 @@ public:
     void addRect(float x, float y, float width, float height, std::string label);
     
     // Getter methods
-    virtual float getPosX() const;
-    virtual float getPosY() const;
-    virtual float getWidth() const;
-    virtual float getHeight() const;
-    virtual float getCenterX() const;
-    virtual float getCenterY() const;
+    float getPosX() const;
+    float getPosY() const;
+    float getWidth() const;
+    float getHeight() const;
+    float getCenterX() const;
+    float getCenterY() const;
     std::string getLabel() const;
+    float getRed() const;
+    float getGreen() const;
+    float getBlue() const;
+    
     
     // Setter methods
-    virtual void setX(float newX);
-    virtual void setY(float newY);
-    virtual void setHeight(float newHeight);
-    virtual void setWidth(float newWidth);
+    void setX(float newX);
+    void setY(float newY);
+    void setHeight(float newHeight);
+    void setWidth(float newWidth);
+    void setRed(float red);
+    void setGreen(float green);
+    void setBlue(float blue);
     
     // Miscellaneous methods
-    virtual bool contains(float mx, float my) const;
-    virtual bool isSlotUsed() const;
+    bool contains(float mx, float my) const;
+    bool isSlotUsed() const;
     
     // draw methods
-    virtual void draw() const;
+    void draw() const;
+    
+    // idle funcs
+    void idle();
+    void keyPress(unsigned char key, float x, float y);
 };
 
 #endif /* Rect_hpp */

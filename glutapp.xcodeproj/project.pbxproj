@@ -15,6 +15,7 @@
 		5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DC5218B793400DDEFF2 /* Shape.cpp */; };
 		5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */; };
 		5F5C5DCE218BBD9900DDEFF2 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */; };
+		5FB699DD218D039D008E0C1C /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FB699DB218D039D008E0C1C /* Physics.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
 		5F5C5DCD218BBD9900DDEFF2 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
+		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
 		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +85,10 @@
 		5F5C5DC8218B97A000DDEFF2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				5FB699DB218D039D008E0C1C /* Physics.cpp */,
 				5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */,
-				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
 				1799B7E61E5ECD67006D7CBD /* App.cpp */,
+				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
 				5F5C5DC5218B793400DDEFF2 /* Shape.cpp */,
 				5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */,
 			);
@@ -99,6 +103,7 @@
 				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
 				904227F9218B74F50060F774 /* Rect.h */,
 				5F5C5DCD218BBD9900DDEFF2 /* Circle.h */,
+				5FB699DC218D039D008E0C1C /* Physics.h */,
 			);
 			path = includes;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */,
 				1799B7E51E5E3A83006D7CBD /* GlutApp.cpp in Sources */,
 				5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */,
+				5FB699DD218D039D008E0C1C /* Physics.cpp in Sources */,
 				5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

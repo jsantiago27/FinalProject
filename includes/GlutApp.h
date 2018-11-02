@@ -50,7 +50,8 @@ private:
     virtual void resize ( int w, int h );
     
     // Called when a key is pressed
-    virtual void keyPress(unsigned char key);
+    
+    virtual void keyPress(unsigned char key, float x, float y);
     
     // Called when a special key (up/down arrow) is pressed
     virtual void specialKeyPress(int key){}
