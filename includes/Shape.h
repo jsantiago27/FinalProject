@@ -19,6 +19,7 @@
 #endif
 
 class Shape {
+    
 public:
     // Pure virtual method for draw function
     virtual void draw() const = 0;

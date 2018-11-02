@@ -1,5 +1,5 @@
-#ifndef Rect_hpp
-#define Rect_hpp
+#ifndef Rect_h
+#define Rect_h
 
 #include <string>
 #include <vector>
@@ -34,26 +34,26 @@ public:
     void addRect(float x, float y, float width, float height, std::string label);
     
     // Getter methods
-    float getPosX() const;
-    float getPosY() const;
-    float getWidth() const;
-    float getHeight() const;
-    float getCenterX() const;
-    float getCenterY() const;
+    virtual float getPosX() const;
+    virtual float getPosY() const;
+    virtual float getWidth() const;
+    virtual float getHeight() const;
+    virtual float getCenterX() const;
+    virtual float getCenterY() const;
     std::string getLabel() const;
     
     // Setter methods
-    void setX(float newX);
-    void setY(float newY);
-    void setHeight(float newHeight);
-    void setWidth(float newWidth);
+    virtual void setX(float newX);
+    virtual void setY(float newY);
+    virtual void setHeight(float newHeight);
+    virtual void setWidth(float newWidth);
     
     // Miscellaneous methods
-    bool contains(float mx, float my) const;
-    bool isSlotUsed() const;
+    virtual bool contains(float mx, float my) const;
+    virtual bool isSlotUsed() const;
     
     // draw methods
-    void draw() const;
+    virtual void draw() const;
 };
 
 #endif /* Rect_hpp */

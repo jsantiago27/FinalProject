@@ -8,9 +8,18 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     // initialize my Rects;
     myRects = new Rect();
     
+    // initialize myCirc
+    myCircs = new Circle();
+    
     myRects->addRect(0.0, 0.0, 0.3, 0.3);
     myRects->addRect(0.5, 0.5, 0.3, 0.3);
     myRects->addRect(-0.4, -0.5, 0.3, 0.3);
+    
+    myCircs->addCircle();
+    myCircs->addCircle(-0.6, 0.3, 0.5);
+    myCircs->addCircle(0.5, -0.3, 0.5);
+    
+    
 }
 
 void App::draw() {
@@ -28,16 +37,6 @@ void App::draw() {
     // Set Color
     glColor3d(1.0, 1.0, 1.0);
     
-    // Draw some points
-    glBegin(GL_POINTS);
-    
-    glVertex2f(0.5, 0.5);
-    glVertex2f(0.5, -0.5);
-    glVertex2f(-0.5, -0.5);
-    glVertex2f(-0.5, 0.5);
-    
-    glEnd();
-    
     // Draw a yellow cross
     glColor3d(1.0, 1.0, 0.0);
     
@@ -53,7 +52,7 @@ void App::draw() {
     
     
     myRects->draw();
-    
+    myCircs->draw();
     
     
     // We have been drawing everything to the back buffer

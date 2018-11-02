@@ -3,15 +3,18 @@
 
 #include "GlutApp.h"
 #include "Rect.h"
+#include "Circle.h"
 
 
+
+#include <vector>
 class App: public GlutApp {
     // Maintain app state here
     float mx;
     float my;
     
     Rect* myRects;
-    
+    Circle* myCircs;
 public:
     // Constructor, to initialize state
     App(const char* label, int x, int y, int w, int h);
