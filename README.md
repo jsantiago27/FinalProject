@@ -12,8 +12,15 @@
             - Also Made it a child of Shape
         - Created a Shape class.
             - it has pure virtual functions (contains and draw)
+<<<<<<< HEAD
     * Time: 5:18pm
         - Added Circle Class
+=======
+- November 2, 2018
+    * Time: 12:48pm
+	- Made a fix for visual studio 2017.
+
+>>>>>>> f84c6829ac711db94f1be6cd1c4cfa54e7af428a
 
 ### Known Bugs
 --- 
@@ -21,5 +28,5 @@
 
 ### Things Needed to be Implemented
 --- 
-- [x] Choose which game we want
-- [ ] Add a standard template for the game
+- [ ] Choose which game we want
+- [x] Add a standard template for the game
