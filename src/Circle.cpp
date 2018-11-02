@@ -50,7 +50,7 @@ void Circle::draw() const {
                 rad = myCircles[i]->getRad();
         
         glBegin(GL_POLYGON);
-        for (float theta = 0; theta < 2*M_PI; theta += 0.01) {
+        for (float theta = 0; theta < 2 * M_PI; theta += 0.01) {
             
             glVertex2f(posX + (rad * cos(theta)), posY + (rad * sin(theta)));
             glVertex2f(posX + (rad * cos(theta + 0.01)), posY + (rad * sin(theta + 0.01)));

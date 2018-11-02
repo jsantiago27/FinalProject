@@ -12,6 +12,10 @@
             - Also Made it a child of Shape
         - Created a Shape class.
             - it has pure virtual functions (contains and draw)
+- November 2, 2018
+    * Time: 12:48pm
+	- Made a fix for visual studio 2017.
+
 
 ### Known Bugs
 --- 
@@ -19,5 +23,5 @@
 
 ### Things Needed to be Implemented
 --- 
-- [x] Choose which game we want
-- [ ] Add a standard template for the game
+- [ ] Choose which game we want
+- [x] Add a standard template for the game

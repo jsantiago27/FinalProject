@@ -9,6 +9,7 @@
 #ifndef Circle_h
 #define Circle_h
 
+#define _USE_MATH_DEFINES
 #include <vector>
 #include <cmath>
 #include "Shape.h"
