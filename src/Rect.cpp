@@ -7,18 +7,19 @@
 //
 
 #include "../includes/Rect.h"
+#include "iostream"
 
-Rect::Rect() : x(0), y(0), width(0.01), height(0.01), checked(false), r(1), g(1), b(1) {
+Rect::Rect() : Shape(0,0,1.0,1.0,1.0), width(0.01), height(0.01), checked(false){
     moving = NOT_MOVING;
 }
 
 
-Rect::Rect(float x, float y, float width, float height) : x(x) , y(y), width(width), height(height), checked(false), r(1), g(1), b(1) {
+Rect::Rect(float x, float y, float width, float height) : Shape(x, y, 1, 1, 1), width(width), height(height), checked(false){
     moving = NOT_MOVING;
 }
 
 
-Rect::Rect(float x, float y, float width, float height, std::string label) : x(x) , y(y), width(width), height(height), checked(false), label(label), r(1), g(1), b(1) {
+Rect::Rect(float x, float y, float width, float height, std::string label) : Shape(x, y, 1, 1, 1), width(width), height(height), checked(false), label(label) {
     moving = NOT_MOVING;
 }
 
@@ -77,8 +78,12 @@ bool Rect::contains(float x, float y) const {
 }
 
 
-bool Rect::isSlotUsed() const {
+bool Rect::isSelected() const {
     return this->checked;
+}
+
+void Rect::select(bool selected) {
+    this->checked = selected;
 }
 
 
@@ -116,42 +121,53 @@ void Rect::draw() const {
 
 void Rect::idle() {
     
-    switch (moving) {
-        case MOVING_UP:
-            
-            for (int i = 0; i < myRects.size(); i++) {
-                myRects[i]->setY(myRects[i]->getPosY() + 0.0005);
+    //collision();
+    
+    for (int i = 0; i < myRects.size(); i++) {
+        if(myRects[i]->isSelected()) {
+            switch (moving) {
+                case MOVING_UP:
+                    if(myRects[i]->getPosY() > 1.0) {
+                        moving = NOT_MOVING;
+                    }
+                    myRects[i]->setY(myRects[i]->getPosY() + 0.0005);
+                    break;
+                
+                case MOVING_DOWN:
+                    if((myRects[i]->getPosY() - myRects[i]->getHeight()) < -1.0) {
+                        moving = NOT_MOVING;
+                    }
+                    myRects[i]->setY(myRects[i]->getPosY() - 0.0005);
+                    
+                    break;
+                
+                case MOVING_LEFT:
+                    if(myRects[i]->getPosX() < -1.0) {
+                        moving = NOT_MOVING;
+                    }
+                    myRects[i]->setX(myRects[i]->getPosX() - 0.0005);
+                    
+                    break;
+                
+                case MOVING_RIGHT:
+                    if((myRects[i]->getPosX() + myRects[i]->getWidth())  > 1.0) {
+                        moving = NOT_MOVING;
+                    }
+                    myRects[i]->setX(myRects[i]->getPosX() + 0.0005);
+                    
+                    break;
+                
+                default:
+                    break;
             }
-            
-            break;
-        
-        case MOVING_DOWN:
-            for (int i = 0; i < myRects.size(); i++) {
-                myRects[i]->setY(myRects[i]->getPosY() - 0.0005);
-            }
-            break;
-        
-        case MOVING_LEFT:
-            for (int i = 0; i < myRects.size(); i++) {
-                myRects[i]->setX(myRects[i]->getPosX() - 0.0005);
-            }
-            break;
-        
-        case MOVING_RIGHT:
-            for (int i = 0; i < myRects.size(); i++) {
-                myRects[i]->setX(myRects[i]->getPosX() + 0.0005);
-            }
-            break;
-        
-        default:
-            break;
+        }
     }
 
     glutPostRedisplay();
 }
 
-void Rect::keyPress(unsigned char key, float x, float y) {
-    
+void Rect::keyPressDown(unsigned char key, float x, float y) {
+
     if(key == 'w') {
         moving = MOVING_UP;
     }
@@ -167,7 +183,14 @@ void Rect::keyPress(unsigned char key, float x, float y) {
     if(key == ' ') {
         moving = NOT_MOVING;
     }
-    
+    glutPostRedisplay();
+}
+
+void Rect::keyPressUp(unsigned char key, float x, float y) {
+    std::cout << "test" << std::endl;
+    if(moving != NOT_MOVING) {
+        moving = NOT_MOVING;
+    }
     glutPostRedisplay();
 }
 
@@ -189,6 +212,78 @@ void Rect::setGreen(float green) {
 }
 void Rect::setBlue(float blue) {
     this->b = blue;
+}
+
+void Rect::mouseDown(int b, int s, float x, float y) const {
+    if (b == 0){
+        // Left click
+        if (s == 0){
+            // Left down
+            for (int i = 0; i < myRects.size(); i++) {
+                if(myRects[i]->contains(x, y)) {
+                    std::cout << i << std::endl;
+                    myRects[i]->select(true);
+                }
+                else {
+                    myRects[i]->select(false);
+                }
+            }
+        }
+        else {
+            // Left up
+        }
+    }
+    else {
+        // Right click
+        if (s == 0){
+            // Right down
+        }
+        else {
+            // Right up
+        }
+    }
+}
+
+
+void Rect::collision() {
+    int current = -1;
+    for (int i = 0; i < myRects.size(); i++) {
+        if(myRects[i]->isSelected()) {
+            current = i;
+            std::cout << i << std::endl;
+        }
+        
+        if(current >= 0 && current != i) {
+            // All points of rectangle
+            float
+                // Get dimensions of current rectangle
+                currposX = myRects[i]->getCenterX(),
+                currposY = myRects[i]->getCenterY(),
+                currwidth = myRects[i]->getWidth(),
+                currheight = myRects[i]->getHeight();
+            
+            // Check if upper border conflicts
+            if(myRects[current]->contains(currposX, currposY + currheight/2)) {
+                std::cout << "Test 1" << std::endl;
+                moving = NOT_MOVING;
+            }
+            // Check if lower border conflicts
+            else if(myRects[current]->contains(currposX, currposY - currheight/2)) {
+                std::cout << "Test 2" << std::endl;
+                moving = NOT_MOVING;
+            }
+            // Check if left border conflicts
+            else if(myRects[current]->contains(currposX - currwidth/2, currposY)) {
+                std::cout << "Test 3" << std::endl;
+                moving = NOT_MOVING;
+            }
+            // Check if right border conflicts
+            else if(myRects[current]->contains(currposX + currwidth/2, currposY)) {
+                std::cout << "Test 4" << std::endl;
+                moving = NOT_MOVING;
+            }
+        }
+    }
 }
 
 

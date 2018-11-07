@@ -20,6 +20,7 @@ private:
     static void passiveCB (int x, int y);
     static void displayCB ();
     static void keyboardCB (unsigned char key, int x, int y);
+    static void keyboardUpCB (unsigned char key, int x, int y);
     static void specialCB (int key, int x, int y);
     static void reshapeCB (int w, int h);
     
@@ -51,7 +52,8 @@ private:
     
     // Called when a key is pressed
     
-    virtual void keyPress(unsigned char key, float x, float y);
+    virtual void keyPressDown(unsigned char key, float x, float y);
+    virtual void keyPressUp(unsigned char key, float x, float y);
     
     // Called when a special key (up/down arrow) is pressed
     virtual void specialKeyPress(int key){}

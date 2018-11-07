@@ -17,17 +17,8 @@ class Rect : public Shape {
 private:
     // vector variable
     std::vector<Rect*> myRects;
-    
-    // Location and dimensions of the Rectangle:
-    float x;
-    float y;
     float width;
     float height;
-    
-    // Colors for the rectangle class
-    float r;
-    float g;
-    float b;
     
     bool checked;
     std::string label;
@@ -75,17 +66,23 @@ public:
     void setRed(float red);
     void setGreen(float green);
     void setBlue(float blue);
+    void select(bool selected);
     
     // Miscellaneous methods
     bool contains(float mx, float my) const;
-    bool isSlotUsed() const;
+    bool isSelected() const;
     
     // draw methods
     void draw() const;
     
     // idle funcs
     void idle();
-    void keyPress(unsigned char key, float x, float y);
+    void keyPressDown(unsigned char key, float x, float y);
+    void keyPressUp(unsigned char key, float x, float y);
+    
+    void mouseDown(int b, int s, float x, float y) const;
+    
+    void collision();
 };
 
 #endif /* Rect_hpp */

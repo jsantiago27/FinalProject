@@ -18,16 +18,6 @@ class Circle : public Shape {
 
 private:
     std::vector<Circle*> myCircles;
-    
-    // Position of the circle
-    float x;
-    float y;
-    
-    // Colors for the circle class
-    float r;
-    float g;
-    float b;
-    
     float rad;
 
 public:
@@ -64,8 +54,10 @@ public:
     // Miscellaneous functions
     bool contains(float mx, float my) const;
     
-    void keyPress(unsigned char key, float x, float y);
-
+    void keyPressDown(unsigned char key, float x, float y);
+    void keyPressUp(unsigned char key, float x, float y);
+    
+    void mouseDown(int b, int s, float x, float y) const;
     
 };
 

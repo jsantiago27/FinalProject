@@ -8,9 +8,9 @@
 
 #include "../includes/Circle.h"
 
-Circle::Circle() : x(0), y(0), rad(0.03), r(1), g(1), b(1) {}
+Circle::Circle() : Shape(0, 0, 1, 1, 1), rad(0.03) {}
 
-Circle::Circle(float x, float y, float radius) : x(x), y(y), rad(radius), r(1), g(1), b(1) {}
+Circle::Circle(float x, float y, float radius) : Shape(x, y, 1, 1, 1), rad(radius) {}
 
 void Circle::addCircle() {
     myCircles.push_back(new Circle());
@@ -70,9 +70,15 @@ void Circle::idle() {
     glutPostRedisplay();
 }
 
-void Circle::keyPress(unsigned char key, float x, float y) {
+void Circle::keyPressDown(unsigned char key, float x, float y) {
     glutPostRedisplay();
 }
+
+void Circle::keyPressUp(unsigned char key, float x, float y) {
+    glutPostRedisplay();
+}
+
+
 
 float Circle::getRed() const {
     return this->r;
@@ -95,8 +101,42 @@ void Circle::setBlue(float blue) {
 }
 
 
+void Circle::mouseDown(int b, int s, float x, float y) const {
+    if (b == 0){
+        // Left click
+        if (s == 0){
+            // Left down
+        }
+        else {
+            // Left up
+        }
+    }
+    else {
+        // Right click
+        if (s == 0){
+            // Right down
+        }
+        else {
+            // Right up
+        }
+    }
+}
+
+
+
 // Miscellaneous functions
 bool Circle::contains(float mx, float my) const {
+    
+    for(int i = 0 ; i < myCircles.size() ; i ++) {
+        float a = mx - myCircles[i]->getPosX();
+        float b = my - myCircles[i]->getPosY();
+        
+        float distance = sqrt(pow(a, 2) + pow(b, 2));
+        
+        if(myCircles[i]->getRad() > distance) {
+            return true;
+        }
+    }
     return false;
 }
 

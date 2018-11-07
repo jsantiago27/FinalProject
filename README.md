@@ -24,11 +24,17 @@
         - Added Animation functions (idle()) and keyPress to both Rect and Circle Classes
         - Temp: Moving rectangle using WASD and Space to stop
 
+- November 7, 2018
+    * Time: 1:18pm
+        - Added collision function (Rect Class)
+        - Added selection system (Rect Class)
+
 >>>>>>> f84c6829ac711db94f1be6cd1c4cfa54e7af428a
 
 ### Known Bugs
 --- 
-
+- November 7, 2018
+    * Collision doesn't work.
 
 ### Things Needed to be Implemented
 --- 
