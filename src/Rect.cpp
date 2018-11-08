@@ -121,7 +121,6 @@ void Rect::draw() const {
 
 void Rect::idle() {
     
-    //collision();
     
     for (int i = 0; i < myRects.size(); i++) {
         if(myRects[i]->isSelected()) {
@@ -161,6 +160,8 @@ void Rect::idle() {
                     break;
             }
         }
+        collision();
+
     }
 
     glutPostRedisplay();
@@ -247,12 +248,17 @@ void Rect::mouseDown(int b, int s, float x, float y) const {
 
 void Rect::collision() {
     int current = -1;
+    //Find slected rectangle;
     for (int i = 0; i < myRects.size(); i++) {
         if(myRects[i]->isSelected()) {
             current = i;
             std::cout << i << std::endl;
         }
         
+    }
+    //Check if slected has collided with the rest
+    for (int i = 0; i < myRects.size(); i++) {
+
         if(current >= 0 && current != i) {
             // All points of rectangle
             float
@@ -265,21 +271,25 @@ void Rect::collision() {
             // Check if upper border conflicts
             if(myRects[current]->contains(currposX, currposY + currheight/2)) {
                 std::cout << "Test 1" << std::endl;
+                myRects[current]->select(false);
                 moving = NOT_MOVING;
             }
             // Check if lower border conflicts
             else if(myRects[current]->contains(currposX, currposY - currheight/2)) {
                 std::cout << "Test 2" << std::endl;
+                myRects[current]->select(false);
                 moving = NOT_MOVING;
             }
             // Check if left border conflicts
             else if(myRects[current]->contains(currposX - currwidth/2, currposY)) {
                 std::cout << "Test 3" << std::endl;
+                myRects[current]->select(false);
                 moving = NOT_MOVING;
             }
             // Check if right border conflicts
             else if(myRects[current]->contains(currposX + currwidth/2, currposY)) {
                 std::cout << "Test 4" << std::endl;
+                myRects[current]->select(false);
                 moving = NOT_MOVING;
             }
         }
