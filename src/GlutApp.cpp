@@ -20,7 +20,8 @@ GlutApp::GlutApp(const char* label, int x, int y, int w, int h) {
     glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
     glPointSize (4);
     glLineWidth (2);
-    
+    glutFullScreen();           // making the window full screen
+
     // Setup GLUT callbacks for different events
     glutDisplayFunc(displayCB);
     glutMouseFunc(mouseCB);
