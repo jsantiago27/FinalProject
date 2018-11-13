@@ -1,1 +1,30 @@
-﻿  glutapp.vcxproj -> C:\Users\altan\Documents\GitHub\FinalProject\visualc15\obj\glutapp_Debug\glutapp.exe
+﻿  app_main.cpp
+  App.cpp
+c:\users\altan\documents\github\finalproject\src\app.cpp(14): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\altan\documents\github\finalproject\src\app.cpp(15): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\altan\documents\github\finalproject\src\app.cpp(16): warning C4305: 'argument': truncation from 'double' to 'float'
+  Circle.cpp
+c:\users\altan\documents\github\finalproject\src\circle.cpp(11): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\altan\documents\github\finalproject\src\circle.cpp(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\circle.cpp(57): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\altan\documents\github\finalproject\src\circle.cpp(60): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\altan\documents\github\finalproject\src\circle.cpp(130): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\circle.cpp(144): warning C4018: '<': signed/unsigned mismatch
+  GlutApp.cpp
+c:\users\altan\documents\github\finalproject\src\glutapp.cpp(43): warning C4305: '-=': truncation from 'double' to 'float'
+  Rect.cpp
+c:\users\altan\documents\github\finalproject\src\rect.cpp(12): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\altan\documents\github\finalproject\src\rect.cpp(98): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\rect.cpp(125): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\rect.cpp(132): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\altan\documents\github\finalproject\src\rect.cpp(139): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\altan\documents\github\finalproject\src\rect.cpp(147): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\altan\documents\github\finalproject\src\rect.cpp(155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\altan\documents\github\finalproject\src\rect.cpp(223): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\rect.cpp(252): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\rect.cpp(260): warning C4018: '<': signed/unsigned mismatch
+c:\users\altan\documents\github\finalproject\src\rect.cpp(301): warning C4018: '<': signed/unsigned mismatch
+  Shape.cpp
+  Generating Code...
+app_main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  glutapp.vcxproj -> C:\Users\altan\Documents\GitHub\FinalProject\visualc15\obj\glutapp_Debug\glutapp.exe

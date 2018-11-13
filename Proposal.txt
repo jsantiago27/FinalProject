@@ -1,0 +1,8 @@
+Team Name: []
+Team Members: Alan Tan, Jefferson Santiago, Omar Olmos
+
+Game Name: Flappy Angelo
+
+Description:
+Game inspired by one of the most popular games in 2014, Flappy Bird. 
+Mechanics are simple and very much like the original... but with our own twist.
