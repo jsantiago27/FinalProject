@@ -1,1 +1,9 @@
-﻿  glutapp.vcxproj -> C:\Users\altan\Documents\GitHub\FinalProject\visualc15\obj\glutapp_Debug\glutapp.exe
+﻿  Circle.cpp
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(13): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(59): error C2065: 'M_PI': undeclared identifier
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(59): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(62): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(112): warning C4018: '<': signed/unsigned mismatch
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(142): warning C4018: '<': signed/unsigned mismatch
+c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(156): warning C4018: '<': signed/unsigned mismatch

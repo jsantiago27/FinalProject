@@ -40,6 +40,7 @@ public:
     void setRed(float red);
     void setGreen(float green);
     void setBlue(float blue);
+    void select(bool select);
     
     // Add circle functions
     void addCircle();

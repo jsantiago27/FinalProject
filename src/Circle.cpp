@@ -6,6 +6,8 @@
 //  Copyright © 2018 Angelo Kyrilov. All rights reserved.
 //
 
+#include <iostream>
+
 #include "../includes/Circle.h"
 
 Circle::Circle() : Shape(0, 0, 1, 1, 1), rad(0.03) {}
@@ -106,6 +108,16 @@ void Circle::mouseDown(int b, int s, float x, float y) const {
         // Left click
         if (s == 0){
             // Left down
+            // Left down
+            for (int i = 0; i < myCircles.size(); i++) {
+                if(myCircles[i]->contains(x, y)) {
+                    std::cout << i << std::endl;
+                    myCircles[i]->select(true);
+                }
+                else {
+                    myCircles[i]->select(false);
+                }
+            }
         }
         else {
             // Left up
