@@ -2,6 +2,7 @@
 #define App_hpp
 
 #include "GlutApp.h"
+#include "SOIL.h"
 #include "Rect.h"
 #include "Circle.h"
 #include <vector>

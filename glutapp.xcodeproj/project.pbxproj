@@ -16,7 +16,6 @@
 		5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5F5C5DCE218BBD9900DDEFF2 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5FB699DD218D039D008E0C1C /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FB699DB218D039D008E0C1C /* Physics.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		90006316219CC2E80010A833 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90006315219CC2E80010A833 /* libSOIL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90006316219CC2E80010A833 /* libSOIL.a in Frameworks */,
 				173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */,
 				173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */,
 			);
@@ -291,10 +289,7 @@
 		173FEF091AA63A07006CCB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/glew/2.1.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -304,10 +299,7 @@
 		173FEF0A1AA63A07006CCB85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/usr/local/Cellar/glew/2.1.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
