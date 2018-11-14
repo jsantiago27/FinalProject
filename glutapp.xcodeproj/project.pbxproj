@@ -16,6 +16,7 @@
 		5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5F5C5DCE218BBD9900DDEFF2 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5FB699DD218D039D008E0C1C /* Physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FB699DB218D039D008E0C1C /* Physics.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		90006316219CC2E80010A833 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90006315219CC2E80010A833 /* libSOIL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		5F5C5DCD218BBD9900DDEFF2 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
 		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
+		90006315219CC2E80010A833 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
+		90006317219CC3190010A833 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = ../../../../../../../../usr/local/include/SOIL.h; sourceTree = "<group>"; };
 		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90006316219CC2E80010A833 /* libSOIL.a in Frameworks */,
 				173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */,
 				173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */,
 			);
@@ -71,6 +75,7 @@
 				5F5C5DC8218B97A000DDEFF2 /* src */,
 				173FEF021AA63A07006CCB85 /* Products */,
 				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
+				90006312219CC04A0010A833 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +103,7 @@
 		5F5C5DC9218B97AC00DDEFF2 /* includes */ = {
 			isa = PBXGroup;
 			children = (
+				90006317219CC3190010A833 /* SOIL.h */,
 				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
 				1799B7E71E5ECD67006D7CBD /* App.h */,
 				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
@@ -106,6 +112,14 @@
 				5FB699DC218D039D008E0C1C /* Physics.h */,
 			);
 			path = includes;
+			sourceTree = "<group>";
+		};
+		90006312219CC04A0010A833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90006315219CC2E80010A833 /* libSOIL.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +291,10 @@
 		173FEF091AA63A07006CCB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -286,6 +304,10 @@
 		173FEF0A1AA63A07006CCB85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.1.0/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
