@@ -83,6 +83,7 @@ public:
     void mouseDown(int b, int s, float x, float y) const;
     
     void collision();
+    void drawTexturedRect(GLuint);
 };
 
 #endif /* Rect_hpp */

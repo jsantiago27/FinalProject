@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BE3DDA17-F918-42E2-B822-4C8A6EF632C9}</ProjectGuid>
     <RootNamespace>glutapp</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -56,7 +56,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../;../freeglut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../windows;../;../freeglut;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -115,23 +115,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\AnimatedRect.cpp" />
+    <ClCompile Include="..\App.cpp" />
     <ClCompile Include="..\app_main.cpp" />
-    <ClCompile Include="..\src\App.cpp" />
-    <ClCompile Include="..\src\Circle.cpp" />
-    <ClCompile Include="..\src\GlutApp.cpp" />
-    <ClCompile Include="..\src\Rect.cpp" />
-    <ClCompile Include="..\src\Shape.cpp" />
+    <ClCompile Include="..\GlutApp.cpp" />
+    <ClCompile Include="..\Rect.cpp" />
+    <ClCompile Include="..\TexRect.cpp" />
+    <ClCompile Include="..\Timer.cpp" />
+    <ClCompile Include="..\windows\image_DXT.c" />
+    <ClCompile Include="..\windows\image_helper.c" />
+    <ClCompile Include="..\windows\SOIL.c" />
+    <ClCompile Include="..\windows\stb_image_aug.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\includes\App.h" />
-    <ClInclude Include="..\includes\Circle.h" />
-    <ClInclude Include="..\includes\GlutApp.h" />
-    <ClInclude Include="..\includes\Rect.h" />
-    <ClInclude Include="..\includes\Shape.h" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="glutapp.rc" />
+    <ClInclude Include="..\AnimatedRect.h" />
+    <ClInclude Include="..\App.h" />
+    <ClInclude Include="..\GlutApp.h" />
+    <ClInclude Include="..\Rect.h" />
+    <ClInclude Include="..\TexRect.h" />
+    <ClInclude Include="..\Timer.h" />
+    <ClInclude Include="..\windows\image_DXT.h" />
+    <ClInclude Include="..\windows\image_helper.h" />
+    <ClInclude Include="..\windows\SOIL.h" />
+    <ClInclude Include="..\windows\stbi_DDS_aug.h" />
+    <ClInclude Include="..\windows\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\windows\stb_image_aug.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

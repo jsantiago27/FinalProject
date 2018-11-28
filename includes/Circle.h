@@ -19,7 +19,7 @@ class Circle : public Shape {
 private:
     std::vector<Circle*> myCircles;
     float rad;
-
+    bool selected;
 public:
     Circle();
     Circle(float x, float y, float radius);

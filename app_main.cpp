@@ -1,14 +1,7 @@
-
-#include "includes/App.h"
+#include "App.h"
 
 int main(int argc, char** argv) {
-	// Initialize GLUT
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
-    
-    // Instantiate a new App
-    App* myApp = new App("MyApp", 50, 50, 600, 600);
+    GlutApp* app = new App(argc, argv);
 
-	// Start the app
-    myApp->run();
+    app->run();
 }
