@@ -1,4 +1,5 @@
 #include "../includes/App.h"
+#include "SOIL.h"
 
 App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w, h){
     // Initialize state variables
@@ -26,13 +27,29 @@ void App::draw() {
     // Set background color to black
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    // Set up the transformations stack
+    
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
     // Set Color
     glColor3d(1.0, 1.0, 1.0);
     
+    
+    texture = SOIL_load_OGL_texture
+    (
+     "space.gif",
+     SOIL_LOAD_AUTO,
+     SOIL_CREATE_NEW_ID,
+     SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
+     );
+    
+    if( 0 == texture )
+    {
+        printf( "SOIL loading error:'\n");
+    }    // Set up the transformations stack
+    
+    
+    myRects[0].drawTexturedRect(texture);
     // Draw a yellow cross
     glColor3d(1.0, 1.0, 0.0);
     
@@ -48,7 +65,7 @@ void App::draw() {
     
     glColor3d(1.0, 0.0, 1.0);
 
-    myRects->draw();
+    //myRects->draw();
     myCircs->draw();
     
     

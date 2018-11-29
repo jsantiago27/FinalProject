@@ -2,7 +2,7 @@
 #define GlutApp_hpp
 
 #include <iostream>
-
+#include "SOIL.h"
 #if defined WIN32
 #include <freeglut.h>
 #elif defined __APPLE__
