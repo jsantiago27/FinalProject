@@ -19,7 +19,8 @@ class Circle : public Shape {
 private:
     std::vector<Circle*> myCircles;
     float rad;
-
+    bool selected;
+    
 public:
     Circle();
     Circle(float x, float y, float radius);
@@ -32,6 +33,7 @@ public:
     float getRed() const;
     float getGreen() const;
     float getBlue() const;
+    bool isSelected() const;
     
     // Setter Functions
     void setX(float newX);
@@ -41,6 +43,7 @@ public:
     void setGreen(float green);
     void setBlue(float blue);
     void select(bool select);
+    
     
     // Add circle functions
     void addCircle();

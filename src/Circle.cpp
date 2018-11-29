@@ -102,6 +102,13 @@ void Circle::setBlue(float blue) {
     this->b = blue;
 }
 
+bool Circle::isSelected() const {
+    return this->selected;
+}
+
+void Circle::select(bool select) {
+    this->selected = select;
+}
 
 void Circle::mouseDown(int b, int s, float x, float y) const {
     if (b == 0){

@@ -44,10 +44,9 @@
 		5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
 		5F5C5DCD218BBD9900DDEFF2 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		5F94A838219CC6F8000B1D2E /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
 		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
 		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
-		90006315219CC2E80010A833 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
-		90006317219CC3190010A833 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SOIL.h; path = ../../../../../../../../usr/local/include/SOIL.h; sourceTree = "<group>"; };
 		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +100,6 @@
 		5F5C5DC9218B97AC00DDEFF2 /* includes */ = {
 			isa = PBXGroup;
 			children = (
-				90006317219CC3190010A833 /* SOIL.h */,
 				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
 				1799B7E71E5ECD67006D7CBD /* App.h */,
 				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
@@ -115,7 +113,7 @@
 		90006312219CC04A0010A833 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				90006315219CC2E80010A833 /* libSOIL.a */,
+				5F94A838219CC6F8000B1D2E /* libSOIL.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -55,8 +55,10 @@ void GlutApp::draw(){
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
     // Set up the transformations stack
-    glMatrixMode(GL_MODELVIEW);
+    glViewport(0, 0, width, height);
+    glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
+    gluPerspective(45.0, (16/10)*(float(width)/float(height)), 0.1, 100.0);
     
     // We have been drawing everything to the back buffer
     // Swap the buffers to see the result of what we drew
