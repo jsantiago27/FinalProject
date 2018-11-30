@@ -1,14 +1,18 @@
 #ifndef App_hpp
 #define App_hpp
+
 #include "GlutApp.h"
 #include "Rect.h"
 #include "Circle.h"
+
+
+
 #include <vector>
 class App: public GlutApp {
     // Maintain app state here
     float mx;
     float my;
-    GLuint texture;
+    
     Rect* myRects;
     Circle* myCircs;
 public:
@@ -16,10 +20,8 @@ public:
     App(const char* label, int x, int y, int w, int h);
     
     // These are the events we want to handle
-    void idle();
     void draw();
-    void keyPressDown(unsigned char key, float x, float y);
-    void keyPressUp(unsigned char key, float x, float y);
+    void keyPress(unsigned char key);
     void mouseDown(float x, float y);
     void mouseDrag(float x, float y);
 };

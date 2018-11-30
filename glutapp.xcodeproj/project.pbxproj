@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1727D28C219145520048CB99 /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1727D28A219145520048CB99 /* GlutApp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173FEF0B1AA63AC4006CCB85 /* app_main.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF151AA63B1B006CCB85 /* OpenGL.framework */; };
 		173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF171AA63B22006CCB85 /* GLUT.framework */; };
-		17609DB8219BF07300F85383 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DB6219BF07300F85383 /* App.cpp */; };
-		17609DBC219C077D00F85383 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17609DBB219C077D00F85383 /* libSOIL.a */; };
-		17609DC2219C098400F85383 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DC0219C098400F85383 /* Rect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		17609DC5219C0DE800F85383 /* TexRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DC3219C0DE800F85383 /* TexRect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		17609DC7219C7B5700F85383 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17609DC6219C7B5700F85383 /* CoreFoundation.framework */; };
-		17609DCB219C9C3E00F85383 /* AnimatedRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DC9219C9C3E00F85383 /* AnimatedRect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		17609DCE219CA02D00F85383 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DCC219CA02D00F85383 /* Timer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		1799B7E51E5E3A83006D7CBD /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		1799B7E81E5ECD67006D7CBD /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1799B7E61E5ECD67006D7CBD /* App.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DC5218B793400DDEFF2 /* Shape.cpp */; };
+		5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */; };
+		5F5C5DCE218BBD9900DDEFF2 /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,13 +30,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1727D28A219145520048CB99 /* GlutApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GlutApp.cpp; sourceTree = "<group>"; };
-		1727D28B219145520048CB99 /* GlutApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		173FEF011AA63A07006CCB85 /* glutapp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = glutapp; sourceTree = BUILT_PRODUCTS_DIR; };
 		173FEF0B1AA63AC4006CCB85 /* app_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = app_main.cpp; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d4f33d0... Merge branch 'master' of https://github.com/jsantiago27/FinalProject
 		1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutApp.cpp; sourceTree = "<group>"; };
 		1799B7E41E5E3A83006D7CBD /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		1799B7E61E5ECD67006D7CBD /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -49,6 +47,7 @@
 		5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
 		5F5C5DCD218BBD9900DDEFF2 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		5F94A838219CC6F8000B1D2E /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
 		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
 		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
@@ -67,6 +66,9 @@
 		17609DCC219CA02D00F85383 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		17609DCD219CA02D00F85383 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 >>>>>>> d4f33d0c850c7e88fc4cbda8df3258c8e5a4bce0
+=======
+		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+>>>>>>> parent of d4f33d0... Merge branch 'master' of https://github.com/jsantiago27/FinalProject
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17609DC7219C7B5700F85383 /* CoreFoundation.framework in Frameworks */,
-				17609DBC219C077D00F85383 /* libSOIL.a in Frameworks */,
 				173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */,
 				173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */,
 			);
@@ -89,21 +89,10 @@
 			children = (
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,
 				173FEF151AA63B1B006CCB85 /* OpenGL.framework */,
-				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
-				17609DB7219BF07300F85383 /* App.h */,
-				17609DB6219BF07300F85383 /* App.cpp */,
-				1727D28B219145520048CB99 /* GlutApp.h */,
-				1727D28A219145520048CB99 /* GlutApp.cpp */,
-				17609DCD219CA02D00F85383 /* Timer.h */,
-				17609DCC219CA02D00F85383 /* Timer.cpp */,
-				17609DC9219C9C3E00F85383 /* AnimatedRect.cpp */,
-				17609DCA219C9C3E00F85383 /* AnimatedRect.h */,
-				17609DC1219C098400F85383 /* Rect.h */,
-				17609DC0219C098400F85383 /* Rect.cpp */,
-				17609DC4219C0DE800F85383 /* TexRect.h */,
-				17609DC3219C0DE800F85383 /* TexRect.cpp */,
+				5F5C5DC9218B97AC00DDEFF2 /* includes */,
+				5F5C5DC8218B97A000DDEFF2 /* src */,
 				173FEF021AA63A07006CCB85 /* Products */,
-				17609DBA219C077D00F85383 /* Frameworks */,
+				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +105,7 @@
 			sourceTree = "<group>";
 		};
 <<<<<<< HEAD
+<<<<<<< HEAD
 		5F5C5DC8218B97A000DDEFF2 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +113,14 @@
 				5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */,
 				1799B7E61E5ECD67006D7CBD /* App.cpp */,
 				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
+=======
+		5F5C5DC8218B97A000DDEFF2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */,
+				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
+				1799B7E61E5ECD67006D7CBD /* App.cpp */,
+>>>>>>> parent of d4f33d0... Merge branch 'master' of https://github.com/jsantiago27/FinalProject
 				5F5C5DC5218B793400DDEFF2 /* Shape.cpp */,
 				5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */,
 			);
@@ -130,6 +128,7 @@
 			sourceTree = "<group>";
 		};
 		5F5C5DC9218B97AC00DDEFF2 /* includes */ = {
+<<<<<<< HEAD
 			isa = PBXGroup;
 			children = (
 				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
@@ -153,8 +152,17 @@
 				17609DC6219C7B5700F85383 /* CoreFoundation.framework */,
 				17609DBB219C077D00F85383 /* libSOIL.a */,
 >>>>>>> d4f33d0c850c7e88fc4cbda8df3258c8e5a4bce0
+=======
+			isa = PBXGroup;
+			children = (
+				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
+				1799B7E71E5ECD67006D7CBD /* App.h */,
+				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
+				904227F9218B74F50060F774 /* Rect.h */,
+				5F5C5DCD218BBD9900DDEFF2 /* Circle.h */,
+>>>>>>> parent of d4f33d0... Merge branch 'master' of https://github.com/jsantiago27/FinalProject
 			);
-			name = Frameworks;
+			path = includes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +191,7 @@
 		173FEEF91AA63A07006CCB85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Angelo Kyrilov";
 				TargetAttributes = {
 					173FEF001AA63A07006CCB85 = {
@@ -213,13 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17609DB8219BF07300F85383 /* App.cpp in Sources */,
+				1799B7E81E5ECD67006D7CBD /* App.cpp in Sources */,
+				5F5C5DCE218BBD9900DDEFF2 /* Circle.cpp in Sources */,
 				173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */,
-				17609DCB219C9C3E00F85383 /* AnimatedRect.cpp in Sources */,
-				1727D28C219145520048CB99 /* GlutApp.cpp in Sources */,
-				17609DC2219C098400F85383 /* Rect.cpp in Sources */,
-				17609DCE219CA02D00F85383 /* Timer.cpp in Sources */,
-				17609DC5219C0DE800F85383 /* TexRect.cpp in Sources */,
+				1799B7E51E5E3A83006D7CBD /* GlutApp.cpp in Sources */,
+				5F5C5DC7218B793400DDEFF2 /* Shape.cpp in Sources */,
+				5F5C5DCB218B986F00DDEFF2 /* Rect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -317,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -326,11 +333,6 @@
 		173FEF091AA63A07006CCB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = SOIL/includes;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SOIL/lib/macOS",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -340,11 +342,6 @@
 		173FEF0A1AA63A07006CCB85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = SOIL/includes;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SOIL/lib/macOS",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

@@ -5,31 +5,19 @@
 #include <vector>
 #include "Shape.h"
 
-#define NOT_MOVING      0
-#define MOVING_UP       1
-#define MOVING_DOWN     2
-#define MOVING_LEFT     3
-#define MOVING_RIGHT    4
-
-
 class Rect : public Shape {
     
 private:
     // vector variable
     std::vector<Rect*> myRects;
+    
+    // Location and dimensions of the Rectangle:
+    float x;
+    float y;
     float width;
     float height;
-    
     bool checked;
     std::string label;
-    
-    // misc
-    //  0 = not moving
-    //  1 = up
-    //  2 = down
-    //  3 = left
-    //  4 = right
-    short moving;
     
 public:
     
@@ -46,44 +34,26 @@ public:
     void addRect(float x, float y, float width, float height, std::string label);
     
     // Getter methods
-    float getPosX() const;
-    float getPosY() const;
-    float getWidth() const;
-    float getHeight() const;
-    float getCenterX() const;
-    float getCenterY() const;
+    virtual float getPosX() const;
+    virtual float getPosY() const;
+    virtual float getWidth() const;
+    virtual float getHeight() const;
+    virtual float getCenterX() const;
+    virtual float getCenterY() const;
     std::string getLabel() const;
-    float getRed() const;
-    float getGreen() const;
-    float getBlue() const;
-    
     
     // Setter methods
-    void setX(float newX);
-    void setY(float newY);
-    void setHeight(float newHeight);
-    void setWidth(float newWidth);
-    void setRed(float red);
-    void setGreen(float green);
-    void setBlue(float blue);
-    void select(bool selected);
+    virtual void setX(float newX);
+    virtual void setY(float newY);
+    virtual void setHeight(float newHeight);
+    virtual void setWidth(float newWidth);
     
     // Miscellaneous methods
-    bool contains(float mx, float my) const;
-    bool isSelected() const;
+    virtual bool contains(float mx, float my) const;
+    virtual bool isSlotUsed() const;
     
     // draw methods
-    void draw() const;
-    
-    // idle funcs
-    void idle();
-    void keyPressDown(unsigned char key, float x, float y);
-    void keyPressUp(unsigned char key, float x, float y);
-    
-    void mouseDown(int b, int s, float x, float y) const;
-    
-    void collision();
-    void drawTexturedRect(GLuint);
+    virtual void draw() const;
 };
 
 #endif /* Rect_hpp */

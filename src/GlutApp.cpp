@@ -20,14 +20,12 @@ GlutApp::GlutApp(const char* label, int x, int y, int w, int h) {
     glHint (GL_POINT_SMOOTH_HINT, GL_NICEST);
     glPointSize (4);
     glLineWidth (2);
-    glutFullScreen();           // making the window full screen
-
+    
     // Setup GLUT callbacks for different events
     glutDisplayFunc(displayCB);
     glutMouseFunc(mouseCB);
     glutMotionFunc(motionCB);
     glutKeyboardFunc(keyboardCB);
-    glutKeyboardUpFunc(keyboardUpCB);
     glutSpecialFunc(specialCB);
     glutIdleFunc(idleCB);
     glutReshapeFunc(reshapeCB);
@@ -76,12 +74,7 @@ void GlutApp::resize ( int w, int h ) {
 
 }
 
-void GlutApp::keyPressDown(unsigned char key, float x, float y){
-    // Exit the application when any key is pressed
-    exit(0);
-}
-
-void GlutApp::keyPressUp(unsigned char key, float x, float y){
+void GlutApp::keyPress(unsigned char key){
     // Exit the application when any key is pressed
     exit(0);
 }
@@ -166,19 +159,7 @@ void GlutApp::passiveCB (int x, int y){
 
 void GlutApp::keyboardCB(unsigned char key, int x, int y){
     // When a key is pressed, call our keypress handler
-    float mx = (float) x;
-    float my = (float) y;
-    app->windowToScene(mx, my);
-    
-    app->keyPressDown(key, mx, my);
-}
-
-void GlutApp::keyboardUpCB(unsigned char key, int x, int y) {
-    float mx = (float) x;
-    float my = (float) y;
-    app->windowToScene(mx, my);
-    
-    app->keyPressUp(key, mx, my);
+    app->keyPress(key);
 }
 
 void GlutApp::specialCB(int key, int x, int y){

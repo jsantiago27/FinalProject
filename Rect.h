@@ -1,56 +1,98 @@
-#ifndef Rect_h
-#define Rect_h
+#ifndef Rect_hpp
+#define Rect_hpp
 
-#if defined WIN32
-#include <freeglut.h>
-#elif defined __APPLE__
-#include <GLUT/glut.h>
-#else
-#include <GL/freeglut.h>
-#endif
+#include "GlutApp.h"
 
-#include <iostream>
 
-class Rect{
-protected:
+class Rect {
+    
+private:
+    // Location and dimensions of the Rectangle:
     float x;
     float y;
-    float w;
-    float h;
-    
-    float r;
-    float g;
-    float b;
+    float width;
+    float height;
+    bool checked;
+    std::string label;
     
 public:
-    Rect(float=0.0f, float=0.0f, float=0.4f, float=0.2f, float=1.0f, float=1.0f, float=1.0f);
+    Rect() : x(0), y(0), width(0.01), height(0.01){}
     
-    float getX() const;
-    float getY() const;
-    float getW() const;
-    float getH() const;
+    Rect(float x, float y, float width, float height) : x(x) , y(y), width(width), height(height), checked(false){}
     
-    float getR() const;
-    float getG() const;
-    float getB() const;
-    
-    void setX(float);
-    void setY(float);
-    void setW(float);
-    void setH(float);
-    
-    void setR(float);
-    void setG(float);
-    void setB(float);
-    
-    bool contains(float, float) const;
+    Rect(float x, float y, float width, float height, std::string label) : x(x) , y(y), width(width), height(height), checked(false), label(label){}
 
+    float getPosX() const {
+        return this->x;
+    }
     
-    void redrawScene();
+    float getPosY() const {
+        return this->y;
+    }
     
-    virtual void draw() const;
+    float getWidth() const {
+        return this->width;
+    }
     
-    virtual ~Rect();
+    float getHeight() const {
+        return this->height;
+    }
+    
+    void setX(float x) {
+        this->x = x;
+    }
+    
+    void setY(float y) {
+        this->y = y;
+    }
+    
+    void setHeight(float height) {
+        this->height = height;
+    }
+    
+    void setWidth(float width) {
+        this->width = width;
+    }
+    
+    float getCenterX() const {
+        return (this->x + (this->width / 2));
+    }
+    
+    float getCenterY() const {
+        return (this->y - (this->height / 2));
+    }
+    
+    bool contains(float x, float y) {
+        return ((x >= (this->getPosX())) && (x <= this->getPosX() + this->width)  && (y <= this->getPosY()) && (y >= this->getPosY() - this->height));
+    }
+    
+    
+    bool isSlotUsed() {
+        return this->checked;
+    }
+    
+    
+    std::string getLabel() {
+        return this->label;
+    }
+    void draw(){
+        glBegin(GL_POINTS);
+        
+        glVertex2f(x, y);
+        glVertex2f(x+width, y);
+        glVertex2f(x+width, y-height);
+        glVertex2f(x, y-height);
+        
+        glEnd();
+    }
+    ~Rect() {
+        this->x = 0;
+        this->y = 0;
+        this->width = 0;
+        this->height = 0;
+        this->checked = false;
+    }
+    
 };
 
-#endif
+#endif /* Rect_hpp */

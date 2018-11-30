@@ -1,5 +1,4 @@
 #include "../includes/App.h"
-#include "SOIL.h"
 
 App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w, h){
     // Initialize state variables
@@ -14,7 +13,11 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     
     myRects->addRect(0.0, 0.0, 0.3, 0.3);
     myRects->addRect(0.5, 0.5, 0.3, 0.3);
-    myCircs->addCircle(-0.6, 0.3, 0.2);
+    myRects->addRect(-0.4, -0.5, 0.3, 0.3);
+    
+    myCircs->addCircle();
+    myCircs->addCircle(-0.6, 0.3, 0.5);
+    myCircs->addCircle(0.5, -0.3, 0.5);
     
     
 }
@@ -27,29 +30,13 @@ void App::draw() {
     // Set background color to black
     glClearColor(0.0, 0.0, 0.0, 1.0);
     
-    
+    // Set up the transformations stack
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
     // Set Color
     glColor3d(1.0, 1.0, 1.0);
     
-    
-    texture = SOIL_load_OGL_texture
-    (
-     "space.gif",
-     SOIL_LOAD_AUTO,
-     SOIL_CREATE_NEW_ID,
-     SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
-     );
-    
-    if( 0 == texture )
-    {
-        printf( "SOIL loading error:'\n");
-    }    // Set up the transformations stack
-    
-    
-    myRects[0].drawTexturedRect(texture);
     // Draw a yellow cross
     glColor3d(1.0, 1.0, 0.0);
     
@@ -63,9 +50,8 @@ void App::draw() {
     
     glEnd();
     
-    glColor3d(1.0, 0.0, 1.0);
-
-    //myRects->draw();
+    
+    myRects->draw();
     myCircs->draw();
     
     
@@ -80,8 +66,6 @@ void App::mouseDown(float x, float y){
     mx = x;
     my = y;
     
-    myRects->mouseDown(0, 0, mx, my);
-    
     // Redraw the scene
     redraw();
 }
@@ -95,29 +79,9 @@ void App::mouseDrag(float x, float y){
     redraw();
 }
 
-void App::keyPressDown(unsigned char key, float x, float y) {
+void App::keyPress(unsigned char key) {
     if (key == 27){
         // Exit the app when Esc key is pressed
         exit(0);
     }
-    
-    myRects->keyPressDown(key, x, y);
-}
-
-void App::keyPressUp(unsigned char key, float x, float y) {
-    if (key == 27){
-        // Exit the app when Esc key is pressed
-        exit(0);
-    }
-    
-    myRects->keyPressUp(key, x, y);
-}
-
-
-void App::idle() {
-    
-    myRects->idle();
-    myCircs->idle();
-    
-    redraw();
 }
