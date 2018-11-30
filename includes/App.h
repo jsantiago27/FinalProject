@@ -1,6 +1,8 @@
 #ifndef App_hpp
 #define App_hpp
+
 #include "GlutApp.h"
+#include "SOIL.h"
 #include "Rect.h"
 #include "Circle.h"
 #include <vector>
@@ -8,7 +10,7 @@ class App: public GlutApp {
     // Maintain app state here
     float mx;
     float my;
-    GLuint texture;
+    
     Rect* myRects;
     Circle* myCircs;
 public:

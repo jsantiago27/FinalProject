@@ -1,38 +1,24 @@
-
-# CSE170 glutapp makefile v2.1 - M. Kallmann 2009
-
-SOURCES := $(shell echo $(./)*.cpp)
-DEPENDS = $(SOURCES:.cpp=.d)
-OBJECTS = $(SOURCES:.cpp=.o)
-OS = $(shell uname) # For Mac OS detection (by Rolando Yanez, Raymond Harris)
+csrc = $(wildcard src/*.cpp)
+ccsrc = $(wildcard ./*.cpp)
+DEPENDS = $(csrc:.cpp=.d)
+obj = $(csrc:.c=.o) $(ccsrc:.cc=.o)
 PROGRAM = glutapp
 
-#######################################################################
-
-# OPTFLAGS = -g  # for debug
-OPTFLAGS =
 CC       = g++
-CFLAGS   = -w $(OPTFLAGS) -ISOIL/includes -std=c++11
+CFLAGS   = -w $(OPTFLAGS)
 
-ifeq ($(strip $(OS)),Darwin)
-	LDFLAGS = -framework CoreFoundation -framework GLUT -framework OpenGL -LSOIL/lib/macOS -lSOIL
+LDFLAGS = $(libgl) -lpng -lz -lm
+
+ifeq ($(shell uname -s), Darwin)
+	LDFLAGS = -framework GLUT -framework OpenGL
 else
-	LDFLAGS = -lGL -lglut -lGLU -LSOIL/lib/ubuntu -lSOIL 
+	LDFLAGS = -lGL -lglut
 endif
-
-#######################################################################
 
 all: $(PROGRAM)
 
-$(PROGRAM):$(OBJECTS)
+$(PROGRAM):$(obj)
 	$(CC) $(CFLAGS) $^ $(LDFLAGS) -o $@
-
-clean:
-	$(RM) $(OBJECTS) $(DEPENDS)
-	$(RM) $(PROGRAM)
-	$(RM) *~
-
-#######################################################################
 
 %.o: %.cpp
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -40,10 +26,8 @@ clean:
 %.d: %.cpp
 	$(CC) -MM $(CFLAGS) $< > $@
 
-#######################################################################
+
 
 ifneq ($(MAKECMDGOALS),clean)
 -include $(DEPENDS)
 endif
-
-#######################################################################

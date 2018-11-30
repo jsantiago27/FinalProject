@@ -158,9 +158,6 @@ bool Circle::contains(float mx, float my) const {
     }
     return false;
 }
-void Circle::select(bool select){
-    this->selected = select;
-}
 
 Circle::~Circle() {
     for (int i = 0; i < myCircles.size(); i++) {

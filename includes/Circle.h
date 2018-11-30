@@ -20,10 +20,7 @@ private:
     std::vector<Circle*> myCircles;
     float rad;
     bool selected;
-<<<<<<< HEAD
     
-=======
->>>>>>> d4f33d0c850c7e88fc4cbda8df3258c8e5a4bce0
 public:
     Circle();
     Circle(float x, float y, float radius);
