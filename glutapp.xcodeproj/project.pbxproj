@@ -39,21 +39,6 @@
 		173FEF0B1AA63AC4006CCB85 /* app_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = app_main.cpp; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-<<<<<<< HEAD
-		1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutApp.cpp; sourceTree = "<group>"; };
-		1799B7E41E5E3A83006D7CBD /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
-		1799B7E61E5ECD67006D7CBD /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
-		1799B7E71E5ECD67006D7CBD /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
-		5F5C5DC5218B793400DDEFF2 /* Shape.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
-		5F5C5DC6218B793400DDEFF2 /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
-		5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
-		5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
-		5F5C5DCD218BBD9900DDEFF2 /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
-		5F94A838219CC6F8000B1D2E /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = ../../../../../../../../usr/local/lib/libSOIL.a; sourceTree = "<group>"; };
-		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
-		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
-		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
-=======
 		17609DB6219BF07300F85383 /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		17609DB7219BF07300F85383 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		17609DBB219C077D00F85383 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = SOIL/lib/macOS/libSOIL.a; sourceTree = "<group>"; };
@@ -66,7 +51,6 @@
 		17609DCA219C9C3E00F85383 /* AnimatedRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedRect.h; sourceTree = "<group>"; };
 		17609DCC219CA02D00F85383 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		17609DCD219CA02D00F85383 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
->>>>>>> d4f33d0c850c7e88fc4cbda8df3258c8e5a4bce0
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,44 +99,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		5F5C5DC8218B97A000DDEFF2 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				5FB699DB218D039D008E0C1C /* Physics.cpp */,
-				5F5C5DCC218BBD9900DDEFF2 /* Circle.cpp */,
-				1799B7E61E5ECD67006D7CBD /* App.cpp */,
-				1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */,
-				5F5C5DC5218B793400DDEFF2 /* Shape.cpp */,
-				5F5C5DCA218B986F00DDEFF2 /* Rect.cpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		5F5C5DC9218B97AC00DDEFF2 /* includes */ = {
-			isa = PBXGroup;
-			children = (
-				1799B7E41E5E3A83006D7CBD /* GlutApp.h */,
-				1799B7E71E5ECD67006D7CBD /* App.h */,
-				5F5C5DC6218B793400DDEFF2 /* Shape.h */,
-				904227F9218B74F50060F774 /* Rect.h */,
-				5F5C5DCD218BBD9900DDEFF2 /* Circle.h */,
-				5FB699DC218D039D008E0C1C /* Physics.h */,
-			);
-			path = includes;
-			sourceTree = "<group>";
-		};
-		90006312219CC04A0010A833 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5F94A838219CC6F8000B1D2E /* libSOIL.a */,
-=======
 		17609DBA219C077D00F85383 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				17609DC6219C7B5700F85383 /* CoreFoundation.framework */,
 				17609DBB219C077D00F85383 /* libSOIL.a */,
->>>>>>> d4f33d0c850c7e88fc4cbda8df3258c8e5a4bce0
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
