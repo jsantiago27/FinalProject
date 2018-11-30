@@ -35,6 +35,7 @@
 		173FEF0B1AA63AC4006CCB85 /* app_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = app_main.cpp; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+<<<<<<< HEAD
 		1799B7E31E5E3A83006D7CBD /* GlutApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutApp.cpp; sourceTree = "<group>"; };
 		1799B7E41E5E3A83006D7CBD /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		1799B7E61E5ECD67006D7CBD /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -48,6 +49,20 @@
 		5FB699DB218D039D008E0C1C /* Physics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Physics.cpp; sourceTree = "<group>"; };
 		5FB699DC218D039D008E0C1C /* Physics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Physics.h; sourceTree = "<group>"; };
 		904227F9218B74F50060F774 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+=======
+		17609DB6219BF07300F85383 /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		17609DB7219BF07300F85383 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		17609DBB219C077D00F85383 /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = SOIL/lib/macOS/libSOIL.a; sourceTree = "<group>"; };
+		17609DC0219C098400F85383 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
+		17609DC1219C098400F85383 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		17609DC3219C0DE800F85383 /* TexRect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TexRect.cpp; sourceTree = "<group>"; };
+		17609DC4219C0DE800F85383 /* TexRect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TexRect.h; sourceTree = "<group>"; };
+		17609DC6219C7B5700F85383 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		17609DC9219C9C3E00F85383 /* AnimatedRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedRect.cpp; sourceTree = "<group>"; };
+		17609DCA219C9C3E00F85383 /* AnimatedRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedRect.h; sourceTree = "<group>"; };
+		17609DCC219CA02D00F85383 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		17609DCD219CA02D00F85383 /* Timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+>>>>>>> 8386071ca906b9ad5d4453c6d26404a8918b8187
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +99,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		5F5C5DC8218B97A000DDEFF2 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				5F94A838219CC6F8000B1D2E /* libSOIL.a */,
+=======
+		17609DBA219C077D00F85383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17609DC6219C7B5700F85383 /* CoreFoundation.framework */,
+				17609DBB219C077D00F85383 /* libSOIL.a */,
+>>>>>>> 8386071ca906b9ad5d4453c6d26404a8918b8187
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
