@@ -10,6 +10,7 @@ App::App(int argc, char** argv): GlutApp(argc, argv){
 void App::draw() {
     explosion->draw(0.15);
     fastExplosion->draw(0.15);
+
 }
 
 void App::keyDown(unsigned char key, float x, float y){
