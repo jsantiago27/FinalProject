@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17134.0
-Debug|Win32|C:\Users\jeffr\OneDrive\CSE 165\Final Project\FinalProject\visualc15\|
-=======
-#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.16299.0
-Debug|Win32|C:\Users\Angelo Kyrilov\Desktop\OpenGLTemplateFinal\visualc15\|
->>>>>>> 8386071ca906b9ad5d4453c6d26404a8918b8187
+Debug|Win32|C:\Users\Jefferson\Desktop\CSE\FinalProject\visualc15\|

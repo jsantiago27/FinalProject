@@ -1,89 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿  Circle.cpp
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(13): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(49): warning C4018: '<': signed/unsigned mismatch
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(59): error C2065: 'M_PI': undeclared identifier
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(59): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(62): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(112): warning C4018: '<': signed/unsigned mismatch
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(142): warning C4018: '<': signed/unsigned mismatch
-c:\users\jeffr\onedrive\cse 165\final project\finalproject\src\circle.cpp(156): warning C4018: '<': signed/unsigned mismatch
-=======
 ﻿  app_main.cpp
+c:\users\jefferson\desktop\cse\finalproject\app_main.cpp(2): fatal error C1083: Cannot open include file: 'includes/App.h': No such file or directory
   App.cpp
-c:\users\altan\documents\github\finalproject\src\app.cpp(14): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\altan\documents\github\finalproject\src\app.cpp(15): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\altan\documents\github\finalproject\src\app.cpp(16): warning C4305: 'argument': truncation from 'double' to 'float'
+c1xx : fatal error C1083: Cannot open source file: '..\src\App.cpp': No such file or directory
   Circle.cpp
-c:\users\altan\documents\github\finalproject\src\circle.cpp(11): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\altan\documents\github\finalproject\src\circle.cpp(47): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\circle.cpp(57): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\altan\documents\github\finalproject\src\circle.cpp(60): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\altan\documents\github\finalproject\src\circle.cpp(130): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\circle.cpp(144): warning C4018: '<': signed/unsigned mismatch
+c1xx : fatal error C1083: Cannot open source file: '..\src\Circle.cpp': No such file or directory
   GlutApp.cpp
-c:\users\altan\documents\github\finalproject\src\glutapp.cpp(43): warning C4305: '-=': truncation from 'double' to 'float'
+c:\users\jefferson\desktop\cse\finalproject\src\glutapp.cpp(1): fatal error C1083: Cannot open include file: '../includes/GlutApp.h': No such file or directory
   Rect.cpp
-c:\users\altan\documents\github\finalproject\src\rect.cpp(12): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\altan\documents\github\finalproject\src\rect.cpp(98): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\rect.cpp(125): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\rect.cpp(132): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\altan\documents\github\finalproject\src\rect.cpp(139): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\altan\documents\github\finalproject\src\rect.cpp(147): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\altan\documents\github\finalproject\src\rect.cpp(155): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\altan\documents\github\finalproject\src\rect.cpp(223): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\rect.cpp(252): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\rect.cpp(260): warning C4018: '<': signed/unsigned mismatch
-c:\users\altan\documents\github\finalproject\src\rect.cpp(301): warning C4018: '<': signed/unsigned mismatch
+c1xx : fatal error C1083: Cannot open source file: '..\src\Rect.cpp': No such file or directory
   Shape.cpp
+c1xx : fatal error C1083: Cannot open source file: '..\src\Shape.cpp': No such file or directory
   Generating Code...
-app_main.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  glutapp.vcxproj -> C:\Users\altan\Documents\GitHub\FinalProject\visualc15\obj\glutapp_Debug\glutapp.exe
->>>>>>> 4e355eed531d3bbd5261798b75c58337fa03a9f9
-=======
-﻿  image_DXT.c
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_dxt.c(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-  image_helper.c
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_helper.c(325): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_helper.c(366): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_helper.c(373): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_helper.c(415): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\image_helper.c(422): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  SOIL.c
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\soil.c(1719): warning C4018: '<=': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\soil.c(1729): warning C4018: '<': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\soil.c(1841): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-  stb_image_aug.c
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(177): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(251): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(303): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(1557): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(2394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(2709): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(2995): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(3209): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(3548): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stb_image_aug.c(3644): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stbi_dds_aug_c.h(362): warning C4018: '>': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stbi_dds_aug_c.h(366): warning C4018: '>': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stbi_dds_aug_c.h(390): warning C4018: '<': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stbi_dds_aug_c.h(427): warning C4018: '<': signed/unsigned mismatch
-c:\users\angelo kyrilov\desktop\opengltemplatefinal\windows\stbi_dds_aug_c.h(498): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
-  Generating Code...
-AnimatedRect.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  glutapp.vcxproj -> C:\Users\Angelo Kyrilov\Desktop\OpenGLTemplateFinal\visualc15\obj\glutapp_Debug\glutapp.exe
->>>>>>> 8386071ca906b9ad5d4453c6d26404a8918b8187
