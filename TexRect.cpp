@@ -27,6 +27,7 @@ TexRect::TexRect(const char* filename, float x=0, float y=0, float w=0.5, float 
 
 
 void TexRect::draw(float z) const {
+
     glBindTexture( GL_TEXTURE_2D, texture_id );
     glEnable(GL_TEXTURE_2D);
     
@@ -47,4 +48,6 @@ void TexRect::draw(float z) const {
     glEnd();
     
     glDisable(GL_TEXTURE_2D);
+
 }
+
