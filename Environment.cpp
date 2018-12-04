@@ -9,48 +9,59 @@
 #include "Environment.hpp"
 //Constructors for the environment
 Environment::Environment(){
-    buildPipes();
+    buildPipes(" ");
 }
-Environment::Environment(int amount): amount(amount){
-    buildPipes();
+Environment::Environment(int amount, const char* file): amount(amount){
+    buildPipes(file);
     drawPipes();
     
 }
 
 //Function to create pipes
-void Environment::buildPipes(){
+void Environment::buildPipes(const char* file){
     //Building top pipes
     std::cout << "Building " << amount << " Top Pipes" << std::endl;
     for(int i = 1; i <= amount; i++){
-        topPipes.push_back(new Rect(1 + (i - 0.4), 1, 0.3, 0.4, 1,1,0.0));
+        topPipes.push_back(new TexRect(file, (1.0 + ((float)i - 0.4)), 1.0, 0.4, 0.5));
     }
     std::cout << "Building " << amount << " Bottom Pipes" << std::endl;
     
     //Building bottom pipes
     for(int i = 1; i <= amount; i++){
-        bottomPipes.push_back(new Rect(1 + (i - 0.4) , -1, -0.3, -0.4, 1,0.0,1));
+        bottomPipes.push_back(new TexRect(file,(1.0 + ((float)i - 0.4)), -1.0, 0.4, -1.0) );
     }
 }
 
 void Environment::move(float rate){
     std::cout << "Moving Pipes " << std::endl;
 
-    for(int i = 1; i <= amount; i++){
-        int x = topPipes[i - 1]->getX();
-        topPipes[i - 1]->setX(x - rate);
-        x = bottomPipes[i - 1]->getX();
-        bottomPipes[i - 1]->setX(x - rate);
+    for(int i = 0; i < amount; i++){
+        
+        float x = topPipes[i]->getX();
+        
+        std::cout << x << std::endl;
+
+        topPipes[i]->setX(x - rate);
+        x = bottomPipes[i]->getX();
+        
+        std::cout << x << std::endl;
+
+        bottomPipes[i]->setX(x - rate);
     }
-    drawPipes();
 }
 
 void Environment::drawPipes(){
     std::cout << "Drawing Pipes " << std::endl;
     
-    for(int i = 1; i <= amount; i++){
-        topPipes[i - 1]->draw();
-        bottomPipes[i - 1]->draw();
+    for(int i = 0; i < amount; i++){
+        topPipes[i]->draw(0.1);
+        bottomPipes[i]->draw(0.1);
     }
+}
 
-    
+Environment::~Environment(){
+    for(int i = 0; i < amount; i++){
+        delete topPipes[i];
+        delete bottomPipes[i];
+    }
 }

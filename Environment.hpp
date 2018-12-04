@@ -18,24 +18,27 @@
 #endif
 
 #include <iostream>
-#include "Rect.h"
+#include "TexRect.h"
 #include <vector>
 
 
 class Environment{
 public:
-    std::vector<Rect*> topPipes;
-    std::vector<Rect*> bottomPipes;
+    std::vector<TexRect*> topPipes;
+    std::vector<TexRect*> bottomPipes;
+    
     int amount = 0;
     
     Environment();
-    Environment(int);
+    Environment(int, const char*);
     
-    void buildPipes();
+    void buildPipes(const char*);
     void addPipe();
     
     void move(float);
     void drawPipes();
+    
+    ~Environment();
     
 };
 #endif /* Environment_hpp */

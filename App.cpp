@@ -2,19 +2,21 @@
 #include "App.h"
 
 int amount = 5;
-int rate = 0.05;
+float rate = 0.0005;
+
+const char* pipeFile = "pipe2.png";
+
 
 App::App(int argc, char** argv): GlutApp(argc, argv){
-    explosion = new AnimatedRect("fireball.bmp", 6, 6, 100, -0.5, 0.5, 0.5, 0.5);
     
-    fastExplosion = new AnimatedRect("fireball.bmp", 6, 6, 10, 0.5, 0.5, 0.5, 0.5);
-    game = new Environment(amount);
+    game = new Environment(amount, pipeFile);
 }
 
 void App::draw() {
     
     game->move(rate);
-
+    game->drawPipes();
+    redraw();
 }
 
 void App::keyDown(unsigned char key, float x, float y){
@@ -23,13 +25,10 @@ void App::keyDown(unsigned char key, float x, float y){
     }
     
     if (key == ' '){
-        fastExplosion->playOnce();
-        explosion->playOnce();
     }
 }
 
 App::~App(){
     std::cout << "Exiting..." << std::endl;
-    delete explosion;
-    delete fastExplosion;
+    delete game;
 }
