@@ -20,6 +20,8 @@
 #include <iostream>
 #include "TexRect.h"
 #include <vector>
+#include <random>
+#include <thread>
 
 
 class Environment{
@@ -27,16 +29,20 @@ public:
     std::vector<TexRect*> topPipes;
     std::vector<TexRect*> bottomPipes;
     
-    int amount = 0;
+    float tubegap;
+    
+    int amount;
+    const char* file;
     
     Environment();
-    Environment(int, const char*);
+    Environment(int, const char*, float);
     
     void buildPipes(const char*);
     void addPipe();
     
     void move(float);
     void drawPipes();
+    float generateHeight(float, float);
     
     ~Environment();
     
