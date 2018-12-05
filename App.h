@@ -10,6 +10,7 @@ class App: public GlutApp {
     AnimatedRect* explosion;
     AnimatedRect* fastExplosion;
     Environment* game;
+    TexRect* back;
     
 public:
     

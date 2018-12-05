@@ -11,8 +11,8 @@
 Environment::Environment(){
     buildPipes(" ");
 }
-Environment::Environment(int amount, const char* file): amount(amount){
-    buildPipes(file);
+Environment::Environment(int amount, const char* pipe): amount(amount){
+    buildPipes(pipe);
     drawPipes();
     
 }
