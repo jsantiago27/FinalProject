@@ -24,15 +24,16 @@ void Environment::buildPipes(const char* file){
     
     std::cout << "Building " << amount << " Top Pipes" << std::endl;
     float randomHeight = 0;
-    for(int i = 1; i <= amount; i++){
+    for(int i = 0; i < amount; i++){
         //Building top pipes
         // Generate random Height for each pipes
         randomHeight = generateHeight(-0.5, 0.5);
-        topPipes.push_back(new TexRect(file, (2.0 + ((float)i - tubegap)), 2.0 - randomHeight, 0.5, 1.6));
-        bottomPipes.push_back(new TexRect(file, (2.0 + ((float)i - tubegap)), -2.0 - randomHeight, 0.5, -1.6) );
+        topPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), 2.0 - randomHeight, 0.3, 1.6));
+        bottomPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), -2.0 - randomHeight, 0.3, -1.6) );
     }
 }
 
+//Randomize the height of the pipes
 float Environment::generateHeight(float low, float high) {
     
     std::random_device rd;
@@ -42,6 +43,7 @@ float Environment::generateHeight(float low, float high) {
     return dis(gen);
 }
 
+//Move the pipes at a set rate
 void Environment::move(float rate){
     
     std::cout << "Moving Pipes " << std::endl;
@@ -61,6 +63,7 @@ void Environment::move(float rate){
     }
 }
 
+//Draw pipes
 void Environment::drawPipes(){
     std::cout << "Drawing Pipes " << std::endl;
     
@@ -70,6 +73,7 @@ void Environment::drawPipes(){
     }
 }
 
+//Destructor
 Environment::~Environment(){
     for(int i = 0; i < amount; i++){
         delete topPipes[i];
