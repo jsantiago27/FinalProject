@@ -1,15 +1,16 @@
 #include <iostream>
 #include "App.h"
 
-int amount = 5;
+int amount = 3;
 float rate = 0.0005;
+float tube_gap = 8.0;
 
 const char* pipeFile = "pipe2.png";
 
 
 App::App(int argc, char** argv): GlutApp(argc, argv){
     
-    game = new Environment(amount, pipeFile);
+    game = new Environment(amount, pipeFile, tube_gap);
 }
 
 void App::draw() {

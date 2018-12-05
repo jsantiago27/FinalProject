@@ -8,10 +8,10 @@
 
 #include "Environment.hpp"
 //Constructors for the environment
-Environment::Environment(){
+Environment::Environment() : amount(0) {
     buildPipes(" ");
 }
-Environment::Environment(int amount, const char* file): amount(amount){
+Environment::Environment(int amount, const char* file, float tubegap): amount(amount), tubegap(tubegap){
     buildPipes(file);
     drawPipes();
     
@@ -19,20 +19,29 @@ Environment::Environment(int amount, const char* file): amount(amount){
 
 //Function to create pipes
 void Environment::buildPipes(const char* file){
-    //Building top pipes
-    std::cout << "Building " << amount << " Top Pipes" << std::endl;
-    for(int i = 1; i <= amount; i++){
-        topPipes.push_back(new TexRect(file, (1.0 + ((float)i - 0.4)), 1.0, 0.4, 0.5));
-    }
-    std::cout << "Building " << amount << " Bottom Pipes" << std::endl;
     
-    //Building bottom pipes
+    std::cout << "Building " << amount << " Top Pipes" << std::endl;
+    float randomHeight = 0;
     for(int i = 1; i <= amount; i++){
-        bottomPipes.push_back(new TexRect(file,(1.0 + ((float)i - 0.4)), -1.0, 0.4, -1.0) );
+        //Building top pipes
+        // Generate random Height for each pipes
+        randomHeight = generateHeight(-0.5, 0.5);
+        topPipes.push_back(new TexRect(file, (2.0 + ((float)i - tubegap)), 2.0 - randomHeight, 0.5, 1.6));
+        bottomPipes.push_back(new TexRect(file, (2.0 + ((float)i - tubegap)), -2.0 - randomHeight, 0.5, -1.6) );
     }
 }
 
+float Environment::generateHeight(float low, float high) {
+    
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(low, high);
+    
+    return dis(gen);
+}
+
 void Environment::move(float rate){
+
     std::cout << "Moving Pipes " << std::endl;
 
     for(int i = 0; i < amount; i++){
