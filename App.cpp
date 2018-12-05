@@ -2,7 +2,7 @@
 #include "App.h"
 
 int amount = 5;
-float rate = 0.0005;
+float rate = 0.001;
 float tube_gap = 2.0;
 
 const char* pipeFile = "pipe2.png";

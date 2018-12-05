@@ -52,14 +52,19 @@ void Environment::move(float rate){
         
         float x = topPipes[i]->getX();
         
-        std::cout << x << std::endl;
-        
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
         std::cout << x << std::endl;
         
         bottomPipes[i]->setX(x - rate);
+        
+        //If pipe reaches end, move to end.
+        if(topPipes[i]->getX() + topPipes[i]->getW() <= -1.0){
+            topPipes[i]->setX(topPipes[i+1]->getX() + tubegap);
+            bottomPipes[i]->setX(bottomPipes[i+1]->getX() + tubegap);
+
+        }
     }
 }
 
@@ -75,6 +80,7 @@ void Environment::drawPipes(){
 
 //Destructor
 Environment::~Environment(){
+    std::cout << "Deleting " << amount << "Pipes" << std::endl;
     for(int i = 0; i < amount; i++){
         delete topPipes[i];
         delete bottomPipes[i];
