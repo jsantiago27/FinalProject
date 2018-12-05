@@ -10,7 +10,9 @@
 //Constructors for the environment
 Environment::Environment() : amount(0) {
     buildPipes(" ");
+    drawPipes();
 }
+
 Environment::Environment(int amount, const char* file, float tubegap): amount(amount), tubegap(tubegap){
     buildPipes(file);
     drawPipes();
@@ -41,20 +43,20 @@ float Environment::generateHeight(float low, float high) {
 }
 
 void Environment::move(float rate){
-
+    
     std::cout << "Moving Pipes " << std::endl;
-
+    
     for(int i = 0; i < amount; i++){
         
         float x = topPipes[i]->getX();
         
         std::cout << x << std::endl;
-
+        
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
         std::cout << x << std::endl;
-
+        
         bottomPipes[i]->setX(x - rate);
     }
 }
