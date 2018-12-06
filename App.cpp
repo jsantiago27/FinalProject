@@ -3,7 +3,7 @@
 
 int amount = 5;
 float rate = 0.001;
-float tube_gap = 2.0;
+float pipe_offset = 2.0;
 
 const char* pipeFile = "pipe2.png";
 const char* background = "back.png";
@@ -11,7 +11,7 @@ const char* background = "back.png";
 
 App::App(int argc, char** argv): GlutApp(argc, argv){
     
-    game = new Environment(amount, pipeFile, tube_gap);
+    game = new Environment(amount, pipeFile, pipe_offset);
     back = new TexRect(background, -1.0, 1.0, 2.0, 2.0);
 }
 
