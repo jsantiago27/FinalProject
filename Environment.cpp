@@ -28,8 +28,8 @@ void Environment::buildPipes(const char* file){
         //Building top pipes
         // Generate random Height for each pipes
         randomHeight = generateHeight(-0.5, 0.5);
-        topPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), 2.0 - randomHeight, 0.3, 1.6));
-        bottomPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), -2.0 - randomHeight, 0.3, -1.6) );
+        topPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), 2.0 - randomHeight, 0.5, 1.6));
+        bottomPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), -2.0 - randomHeight, 0.5, -1.6) );
     }
 }
 
