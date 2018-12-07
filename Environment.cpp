@@ -7,20 +7,21 @@
 //
 
 #include "Environment.hpp"
+
 //Constructors for the environment
-Environment::Environment() : amount(0) {
-    buildPipes(" ");
+Environment::Environment() : amount(0),pipe_offset(0.4), pipe_image(" "){
+    buildPipes();
     drawPipes();
 }
 
-Environment::Environment(int amount, const char* file, float tubegap): amount(amount), tubegap(tubegap){
-    buildPipes(file);
+Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount), pipe_offset(pipe_offset), pipe_image(file){
+    buildPipes();
     drawPipes();
     
 }
 
 //Function to create pipes
-void Environment::buildPipes(const char* file){
+void Environment::buildPipes(){
     
     std::cout << "Building " << amount << " Top Pipes" << std::endl;
     float randomHeight = 0;
@@ -33,6 +34,9 @@ void Environment::buildPipes(const char* file){
     }
 }
 
+void Environment::addPipe(){
+    
+}
 //Randomize the height of the pipes
 float Environment::generateHeight(float low, float high) {
     
@@ -52,14 +56,17 @@ void Environment::move(float rate){
         
         float x = topPipes[i]->getX();
         
-        std::cout << x << std::endl;
-        
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
         std::cout << x << std::endl;
         
         bottomPipes[i]->setX(x - rate);
+        
+        //If pipe reaches end, move to end.
+        if(topPipes[i]->getX() + topPipes[i]->getW() <= -1.0){
+            
+        }
     }
 }
 
@@ -75,6 +82,7 @@ void Environment::drawPipes(){
 
 //Destructor
 Environment::~Environment(){
+    std::cout << "Deleting " << amount << " Pipes" << std::endl;
     for(int i = 0; i < amount; i++){
         delete topPipes[i];
         delete bottomPipes[i];

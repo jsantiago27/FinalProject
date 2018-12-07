@@ -4,7 +4,6 @@
 int App::amount = 5;
 float App::rate = 0.0005;
 float App::tube_gap = 2.0;
-
 const char* App::pipeFile = "pipe2.png";
 const char* App::background = "back.png";
 const char* App::professor = "/Users/jeffersonsantiago/Desktop/Jefferson Personal Drive/OneDrive/CSE 165/Final Project/FinalProject/images/Miguel.png";

@@ -19,25 +19,25 @@
 
 #include <iostream>
 #include "TexRect.h"
-#include <vector>
+#include <deque>
 #include <random>
+#include "Timer.h"
 #include <thread>
 
 
 class Environment{
 public:
-    std::vector<TexRect*> topPipes;
-    std::vector<TexRect*> bottomPipes;
+    std::deque<TexRect*> topPipes;
+    std::deque<TexRect*> bottomPipes;
     
-    float tubegap;
-    
+    float pipe_offset;
+    const char* pipe_image;
     int amount;
-    const char* file;
     
     Environment();
     Environment(int, const char*, float);
     
-    void buildPipes(const char*);
+    void buildPipes();
     void addPipe();
     
     void move(float);
