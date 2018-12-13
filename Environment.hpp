@@ -24,8 +24,8 @@
 #include "Timer.h"
 #include <thread>
 
-
-class Environment{
+class Environment {
+    
 public:
     std::deque<TexRect*> topPipes;
     std::deque<TexRect*> bottomPipes;

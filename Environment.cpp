@@ -14,7 +14,7 @@ Environment::Environment() : amount(0),pipe_offset(0.4), pipe_image(" "){
     drawPipes();
 }
 
-Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount), pipe_offset(pipe_offset), pipe_image(file){
+Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount),  pipe_offset(pipe_offset), pipe_image(file){
     buildPipes();
     drawPipes();
     
@@ -29,8 +29,8 @@ void Environment::buildPipes(){
         //Building top pipes
         // Generate random Height for each pipes
         randomHeight = generateHeight(-0.5, 0.5);
-        topPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), 2.0 - randomHeight, 0.5, 1.6));
-        bottomPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), -2.0 - randomHeight, 0.5, -1.6) );
+        topPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), 2.0 - randomHeight, 0.5, 1.6));
+        bottomPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), -2.0 - randomHeight, 0.5, -1.6) );
     }
 }
 
