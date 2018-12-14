@@ -9,7 +9,7 @@
 #include "Physics.hpp"
 
 
-const float Physics::gravity = -0.0000005;
+const float Physics::gravity = -0.00000025;
 
 
 float Physics::velocity_y(float v0, int time)
