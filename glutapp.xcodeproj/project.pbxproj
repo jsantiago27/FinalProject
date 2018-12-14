@@ -19,7 +19,6 @@
 		17609DCB219C9C3E00F85383 /* AnimatedRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DC9219C9C3E00F85383 /* AnimatedRect.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		17609DCE219CA02D00F85383 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17609DCC219CA02D00F85383 /* Timer.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5FE221A321C328CA00FDB8A7 /* Labels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FE221A121C328CA00FDB8A7 /* Labels.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
-		5FE221A421C35D4900FDB8A7 /* images in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FF0468D21B79D7000F48A64 /* images */; };
 		5FE221A721C3864200FDB8A7 /* nuclearExplosion.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FE221A621C3864200FDB8A7 /* nuclearExplosion.png */; };
 		5FE221A921C395F500FDB8A7 /* pipe1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FE221A821C3950600FDB8A7 /* pipe1.png */; };
 		5FF0468C21B79A7600F48A64 /* Bird.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FF0468A21B79A7600F48A64 /* Bird.cpp */; };
@@ -39,7 +38,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				5FE221A921C395F500FDB8A7 /* pipe1.png in CopyFiles */,
-				5FE221A421C35D4900FDB8A7 /* images in CopyFiles */,
 				90B4A84A21BAF4F00006A28C /* images in CopyFiles */,
 				5FE221A721C3864200FDB8A7 /* nuclearExplosion.png in CopyFiles */,
 				9019608821B70B82005D2974 /* back.png in CopyFiles */,

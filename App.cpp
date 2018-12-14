@@ -1,9 +1,16 @@
 #include <iostream>
 #include "App.h"
 
+//Amount of Pipes
 int App::amount = 2;
+
+//Rate at whihc the pipes move
 float App::rate = 0.0005;
+
+//
 float App::speed = 0.00000001;
+
+//Spacing for the pipes
 float App::tube_gap = 2.0;
 
 #if defined WIN32
@@ -51,11 +58,15 @@ App::App(int argc, char** argv): GlutApp(argc, argv){
     title = NULL;
     scoreBoard = NULL;
     explosion = NULL;
+    back = new TexRect(background, -1.0, 1.0, 2.0, 2.0);
+
     
 }
 
 void App::draw() {
     
+    back->draw(-0.1);
+
     if(gameStarted == false && gameEnded ) {
         if(title != NULL) title->draw(0.0);
         for (int i = 0; i < menu.size(); i++) {
@@ -69,7 +80,6 @@ void App::draw() {
     
     if(gameStarted) {
         
-        back->draw(-0.1);
         //
         if(!gameEnded) game->move();
         
@@ -123,7 +133,6 @@ void App::StartGame(const char* character) {
     delete title;
     bird = new Bird(character);
     game = new Environment(amount, pipeFile2, pipeFile1, tube_gap, rate, speed);
-    back = new TexRect(background, -1.0, 1.0, 2.0, 2.0);
     scoreBoard = new Labels(-0.7, 0.98, 0.4, 0.1, 1.0, 0.5, 0.5, "Score: 0");
     gameEnded = false;
 
@@ -137,7 +146,7 @@ void App::keyDown(unsigned char key, float x, float y){
     if(gameStarted){
         if (key == ' '){
             bird->Jump();
-            redraw();
+           // redraw();
         }
     }
 }
