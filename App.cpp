@@ -43,7 +43,9 @@ App::App(int argc, char** argv): GlutApp(argc, argv){
     menu.push_back(new Labels(-0.4, 0.2, 0.8, 0.2, 1.0, 1.0, 1.0, "Default"));
     menu.push_back(new Labels(-0.4, -0.1, 0.8, 0.2, 1.0, 1.0, 1.0, "Version"));
     
+    score = 0;
     title = NULL;
+    scoreBoard = NULL;
 }
 
 void App::draw() {
@@ -60,10 +62,19 @@ void App::draw() {
     }
     
     if(gameStarted) {
+        if(scoreBoard != NULL) {
+            scoreBoard->setString("Score: " + std::to_string(score));
+            scoreBoard->draw();
+        }
+        // Draw the Background
         back->draw(0.0);
+        //
         game->move(rate);
+        
+        // Draw the pipes
         game->drawPipes();
         bird->draw();
+
     }
     
     redraw();
@@ -89,6 +100,7 @@ void App::StartGame(const char* character) {
     bird = new Bird(character);
     game = new Environment(amount, pipeFile, tube_gap);
     back = new TexRect(background, -1.0, 1.0, 2.0, 2.0);
+    scoreBoard = new Labels(-0.7, 0.98, 0.8, 0.2, 1.0, 0.0, 0.0, "Score: 0");
 }
 
 void App::keyDown(unsigned char key, float x, float y){
@@ -103,6 +115,15 @@ void App::keyDown(unsigned char key, float x, float y){
 
 void App::idle()
 {
+}
+
+
+int App::getScore() const {
+    return score;
+}
+
+void App::addScore() {
+    score++;
 }
 
 void App::leftMouseDown(float x, float y) {

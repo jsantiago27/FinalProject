@@ -40,3 +40,8 @@ void Labels::draw() {
     
     glEnd();
 }
+
+
+void Labels::setString(std::string newString) {
+    this->title = newString;
+}

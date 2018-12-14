@@ -32,11 +32,14 @@ class App: public GlutApp {
     
     std::vector<Labels*> menu;
     Labels* title;
+    Labels* scoreBoard;
     
     std::vector<TexRect*> characterMenu;
     
     bool gameStarted;
     bool CSEVersion;
+    
+    int score;
 
 public:
     
@@ -48,6 +51,9 @@ public:
     void draw();
     
     void idle();
+    
+    int getScore() const;
+    void addScore();
     
     void keyDown(unsigned char key, float x, float y);
     

@@ -29,6 +29,7 @@ public:
     Labels(float x, float y, float w, float h, float r, float g, float b, std::string);
     ~Labels();
     
+    void setString(std::string);
     
     void draw();
     
