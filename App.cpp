@@ -62,16 +62,17 @@ void App::draw() {
     }
     
     if(gameStarted) {
-        if(scoreBoard != NULL) {
-            scoreBoard->setString("Score: " + std::to_string(score));
-            scoreBoard->draw();
-        }
-        // Draw the Background
-        back->draw(0.0);
+        
+        back->draw(-0.1);
         //
         game->move(rate);
         
         // Draw the pipes
+        // Draw the Background
+        if(scoreBoard != NULL) {
+            scoreBoard->setString("Score: " + std::to_string(score));
+            scoreBoard->draw();
+        }
         game->drawPipes();
         bird->draw();
 
@@ -81,6 +82,10 @@ void App::draw() {
 }
 
 void App::createCharacterMenu() {
+    for (int i = 0; i < menu.size(); i++) {
+        delete menu[i];
+    }
+    menu.clear();
     title = new Labels(-0.8, 0.5, 1.6, 0.2, 1.0, 1.0, 1.0, "Choose Your Character!");
     if(CSEVersion == false ){
         characterMenu.push_back(new TexRect(bird1, -0.8, 0, 0.3,0.3));
@@ -109,10 +114,10 @@ void App::keyDown(unsigned char key, float x, float y){
         exit(0);
     }
     if(gameStarted){
-    if (key == ' '){
-        bird->Jump();
-        redraw();
-    }
+        if (key == ' '){
+            bird->Jump();
+            redraw();
+        }
     }
 }
         
@@ -120,7 +125,13 @@ void App::keyDown(unsigned char key, float x, float y){
 void App::idle()
 {
     if(gameStarted) {
-    bird->move();
+        bird->move();
+        
+        for (int i = 0; i < game->bottomPipes.size(); i++) {
+            if(bird->getX() >= game->bottomPipes[i]->getCenterX()) {
+                addScore();
+            }
+        }
     }
 
 }
@@ -154,10 +165,6 @@ void App::leftMouseDown(float x, float y) {
                 CSEVersion = true;
                 createCharacterMenu();
             }
-            for (int i = 0; i < menu.size(); i++) {
-                delete menu[i];
-            }
-            menu.clear();
         }
     }
 }
@@ -165,6 +172,8 @@ void App::leftMouseDown(float x, float y) {
 
 App::~App()
 {
-    std::cout << "Exiting..." << std::endl;
-    delete game;
+    if(gameStarted) {
+        std::cout << "Exiting..." << std::endl;
+        delete game;
+    }
 }

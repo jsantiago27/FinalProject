@@ -27,6 +27,8 @@ public:
     void move();
     void Jump();
     void draw();
+    
+    float getX() const;
     virtual void Fall();
 };
 
