@@ -92,17 +92,25 @@ void App::StartGame(const char* character) {
 }
 
 void App::keyDown(unsigned char key, float x, float y){
+    
     if (key == 27){
         exit(0);
     }
-    
+    if(gameStarted){
     if (key == ' '){
+        bird->Jump();
+        redraw();
+    }
     }
 }
         
 
 void App::idle()
 {
+    if(gameStarted) {
+    bird->move();
+    }
+
 }
 
 void App::leftMouseDown(float x, float y) {

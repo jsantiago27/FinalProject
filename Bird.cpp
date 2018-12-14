@@ -17,11 +17,11 @@ Bird::~Bird(){
 }
 
 void Bird::move() {
-    //float y = bird->getY();
+    float y = bird->getY();
     
-    //velYo -= 0.005;
-    //bird->setY(y + velYo);
-    
+    velYo += gravity;
+    bird->setY(y + velYo);
+    std::cout<< bird->getY() << std::endl;
 }
 
 void Bird::draw() {
@@ -29,7 +29,7 @@ void Bird::draw() {
 }
 
 void Bird::Jump() {
-    velYo = 0.1;
+    velYo += lift;
 }
 void Bird::Fall(){
     //bird->setY(bird->getY() - 0.005) ;
