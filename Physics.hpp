@@ -20,8 +20,8 @@ public:
     Physics();
     ~Physics();
     
+    float getGravity();
     virtual void Update(float time);
-    virtual void Jump();
     
 };
 

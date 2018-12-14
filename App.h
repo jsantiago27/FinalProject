@@ -29,7 +29,7 @@ public:
     void draw();
     
     void keyDown(unsigned char key, float x, float y);
-    
+    void idle();
     ~App();
     
 };

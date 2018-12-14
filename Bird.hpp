@@ -15,7 +15,7 @@
 #include "Physics.hpp"
 
 
-class Bird : private Physics {
+class Bird : public Physics {
     
     TexRect* bird;
     
@@ -24,6 +24,8 @@ public:
     ~Bird();
     
     void draw();
+    virtual void Fall();
+    virtual void Jump();
 };
 
 #endif /* Bird_hpp */

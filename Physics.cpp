@@ -8,9 +8,7 @@
 
 #include "Physics.hpp"
 
-Physics::Physics() : gravity(0.005) {
-     positionY = 0;     // Position of the character
-     velocityY = 0;     // Velocity of the character
+Physics::Physics() : gravity(0.0005), positionY(0), velocityY(0) {
 }
 
 Physics::~Physics() {
@@ -21,6 +19,7 @@ void Physics::Update(float time) {
     
 }
 
-void Physics::Jump() {
-    
+
+float Physics::getGravity() {
+    return gravity;
 }

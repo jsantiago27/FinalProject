@@ -19,3 +19,13 @@ Bird::~Bird(){
 void Bird::draw() {
     bird->draw(0.1);
 }
+void Bird::Fall(){
+    bird->setY(bird->getY() - getGravity()) ;
+   // std::cout << bird->getY() <<  std::endl;
+
+}
+
+void Bird::Jump(){
+    std::cout << "Jumping" << std::endl;
+    bird->setY(bird->getY() + 4*getGravity());
+}

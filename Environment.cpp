@@ -23,14 +23,14 @@ Environment::Environment(int amount, const char* file, float pipe_offset): amoun
 //Function to create pipes
 void Environment::buildPipes(){
     
-    std::cout << "Building " << amount << " Top Pipes" << std::endl;
+   // std::cout << "Building " << amount << " Top Pipes" << std::endl;
     float randomHeight = 0;
     for(int i = 0; i < amount; i++){
         //Building top pipes
         // Generate random Height for each pipes
         randomHeight = generateHeight(-0.5, 0.5);
-        topPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), 2.0 - randomHeight, 0.5, 1.6));
-        bottomPipes.push_back(new TexRect(file, (3.0 + ((float)i*tubegap)), -2.0 - randomHeight, 0.5, -1.6) );
+        topPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), 2.0 - randomHeight, 0.5, 1.6));
+        bottomPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), -2.0 - randomHeight, 0.5, -1.6) );
     }
 }
 
@@ -50,7 +50,7 @@ float Environment::generateHeight(float low, float high) {
 //Move the pipes at a set rate
 void Environment::move(float rate){
     
-    std::cout << "Moving Pipes " << std::endl;
+    //std::cout << "Moving Pipes " << std::endl;
     
     for(int i = 0; i < amount; i++){
         
@@ -59,7 +59,7 @@ void Environment::move(float rate){
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
-        std::cout << x << std::endl;
+        //std::cout << x << std::endl;
         
         bottomPipes[i]->setX(x - rate);
         
@@ -72,7 +72,7 @@ void Environment::move(float rate){
 
 //Draw pipes
 void Environment::drawPipes(){
-    std::cout << "Drawing Pipes " << std::endl;
+    //std::cout << "Drawing Pipes " << std::endl;
     
     for(int i = 0; i < amount; i++){
         topPipes[i]->draw(0.1);

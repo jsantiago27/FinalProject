@@ -6,7 +6,7 @@ float App::rate = 0.0005;
 float App::tube_gap = 2.0;
 const char* App::pipeFile = "pipe2.png";
 const char* App::background = "back.png";
-const char* App::professor = "/Users/jeffersonsantiago/Desktop/Jefferson Personal Drive/OneDrive/CSE 165/Final Project/FinalProject/images/Miguel.png";
+const char* App::professor = "images/Miguel.png";
 
 
 App::App(int argc, char** argv): GlutApp(argc, argv){
@@ -18,9 +18,9 @@ App::App(int argc, char** argv): GlutApp(argc, argv){
 
 void App::draw() {
     back->draw(0.0);
-    game->move(rate);
-    game->drawPipes();
     bird->draw();
+    game->drawPipes();
+
     redraw();
 }
 
@@ -29,10 +29,18 @@ void App::keyDown(unsigned char key, float x, float y){
         exit(0);
     }
     
-    if (key == ' '){
+    if (key == 32){
+        std::cout << "Space" << std::endl;
+        bird->Jump();
+        redraw();
     }
 }
+void App::idle(){
+    
+    game->move(rate);
+    bird->Fall();
 
+}
 App::~App(){
     std::cout << "Exiting..." << std::endl;
     delete game;
