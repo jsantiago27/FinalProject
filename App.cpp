@@ -98,16 +98,18 @@ void App::createCharacterMenu() {
         delete menu[i];
     }
     menu.clear();
-    title = new Labels(-0.8, 0.5, 1.6, 0.2, 1.0, 1.0, 1.0, "Choose Your Character!");
+    
     if(CSEVersion == false ){
+        title = new Labels(-0.8, 0.5, 1.6, 0.2, 1.0, 1.0, 1.0, "Choose Your Character!");
         characterMenu.push_back(new TexRect(bird1, -0.8, 0, 0.4,0.4));
         characterMenu.push_back(new TexRect(bird2, -0.3, 0, 0.4,0.4));
     }
     else {
-        characterMenu.push_back(new TexRect(miguel, -0.7, 0, 0.3,0.3));
-        characterMenu.push_back(new TexRect(daniel, -0.3, 0, 0.5,0.5));
-        characterMenu.push_back(new TexRect(dongli, 0.1, 0, 0.4,0.4));
-        characterMenu.push_back(new TexRect(angelo, 0.4, 0, 0.4,0.4));
+        title = new Labels(-0.8, 0.5, 1.6, 0.2, 1.0, 1.0, 1.0, "Choose Your Professor!");
+        characterMenu.push_back(new TexRect(miguel, -0.9, 0, 0.3,0.3));
+        characterMenu.push_back(new TexRect(daniel, -0.5, 0, 0.5,0.5));
+        characterMenu.push_back(new TexRect(dongli, 0.0, 0, 0.4,0.4));
+        characterMenu.push_back(new TexRect(angelo, 0.5, 0, 0.4,0.4));
     }
     
 }
