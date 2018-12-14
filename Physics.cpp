@@ -9,8 +9,7 @@
 #include "Physics.hpp"
 const float Physics::gravity = -0.00005;
 
-Physics::Physics() : gravity(0.0005), positionY(0), velocityY(0)
-{
+
     float Physics::velocity_y(float v0, int time)
     {
         return v0 + (gravity * time);
