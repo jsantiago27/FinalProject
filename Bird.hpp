@@ -18,6 +18,7 @@
 class Bird : public Physics {
     
     TexRect* bird;
+    float lift = 0.0005;
     
 public:
     Bird(const char* texture);
