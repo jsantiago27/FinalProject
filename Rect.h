@@ -10,8 +10,9 @@
 #endif
 
 #include <iostream>
+#include <string>
 
-class Rect{
+class Rect {
 protected:
     float x;
     float y;
@@ -21,6 +22,8 @@ protected:
     float r;
     float g;
     float b;
+    
+    std::string label;
     
 public:
     Rect(float=0.0f, float=0.0f, float=0.4f, float=0.2f, float=1.0f, float=1.0f, float=1.0f);
@@ -33,6 +36,9 @@ public:
     float getR() const;
     float getG() const;
     float getB() const;
+    
+    float getCenterX() const;
+    float getCenterY() const;
     
     void setX(float);
     void setY(float);

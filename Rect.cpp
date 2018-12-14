@@ -1,6 +1,6 @@
 #include "Rect.h"
 
-Rect::Rect(float x, float y, float w, float h, float r, float g, float b): x(x), y(y), w(w), h(h), r(r), g(g), b(b){
+Rect::Rect(float x, float y, float w, float h, float r, float g, float b): x(x), y(y), w(w), h(h), r(r), g(g), b(b) {
     
 }
 
@@ -30,6 +30,13 @@ float Rect::getG() const {
 
 float Rect::getB() const {
     return b;
+}
+
+float Rect::getCenterX() const {
+    return x + w/2;
+}
+float Rect::getCenterY() const {
+    return y - h/2;
 }
 
 void Rect::setX(float x) {
@@ -73,7 +80,7 @@ void Rect::draw() const {
     glVertex2f(x+w, y);
     glVertex2f(x+w, y-h);
     glVertex2f(x, y-h);
-    
+
     glEnd();
 }
 

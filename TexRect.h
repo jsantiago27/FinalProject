@@ -19,11 +19,14 @@
 class TexRect: public Rect {
 protected:
     GLuint texture_id;
+    const char* file;
     
 public:
     TexRect(const char*, float, float, float, float);
     
     void draw(float z) const;
+    
+    const char* getFile() const;
 };
 
 #endif

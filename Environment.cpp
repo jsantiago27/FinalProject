@@ -34,6 +34,13 @@ void Environment::buildPipes(){
     }
 }
 
+void Environment::resetPipes(TexRect* rect, float height) {
+    rect->setX(2.5);
+    rect->setY(height);
+    rect->setX(2.5);
+    rect->setY(height);
+}
+
 void Environment::addPipe(){
     
 }
@@ -65,7 +72,10 @@ void Environment::move(float rate){
         
         //If pipe reaches end, move to end.
         if(topPipes[i]->getX() + topPipes[i]->getW() <= -1.0){
-            
+            float randomHeight = 0;
+            randomHeight = generateHeight(-0.5, 0.5);
+            resetPipes(topPipes[i], 2.0 - randomHeight);
+            resetPipes(bottomPipes[i], -2.0 - randomHeight);
         }
     }
 }

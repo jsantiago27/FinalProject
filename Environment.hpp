@@ -40,6 +40,8 @@ public:
     void buildPipes();
     void addPipe();
     
+    void resetPipes(TexRect* rect, float height);
+    
     void move(float);
     void drawPipes();
     float generateHeight(float, float);

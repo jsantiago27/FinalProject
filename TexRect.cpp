@@ -1,10 +1,11 @@
 #include "TexRect.h"
 
-TexRect::TexRect(const char* filename, float x=0, float y=0, float w=0.5, float h=0.5): Rect(x, y, w, h, 1.0f, 1.0f, 1.0f){
+TexRect::TexRect(const char* filename, float x=0, float y=0, float w=0.5, float h=0.5) : Rect(x, y, w, h, 1.0f, 1.0f, 1.0f){
     
     glClearColor (0.0, 0.0, 0.0, 0.0);
     glShadeModel(GL_FLAT);
     glEnable(GL_DEPTH_TEST);
+    file = filename;
     
     texture_id = SOIL_load_OGL_texture (
                                         filename,
@@ -49,5 +50,9 @@ void TexRect::draw(float z) const {
     
     glDisable(GL_TEXTURE_2D);
 
+}
+
+const char* TexRect::getFile() const {
+    return this->file;
 }
 

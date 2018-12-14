@@ -9,13 +9,25 @@
 #include "Bird.hpp"
 
 Bird::Bird(const char* texture) {
-    bird = new TexRect(texture, -0.8, 0, 0.5, 0.5);
+    bird = new TexRect(texture, -0.8, 0, 0.3, 0.3);
 }
 
 Bird::~Bird(){
     
 }
 
+void Bird::move() {
+    //float y = bird->getY();
+    
+    //velYo -= 0.005;
+    //bird->setY(y + velYo);
+    
+}
+
 void Bird::draw() {
     bird->draw(0.1);
+}
+
+void Bird::Jump() {
+    velYo = 0.1;
 }

@@ -23,6 +23,8 @@ public:
     Bird(const char* texture);
     ~Bird();
     
+    void move();
+    void Jump();
     void draw();
 };
 

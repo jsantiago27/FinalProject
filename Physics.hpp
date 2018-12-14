@@ -12,6 +12,7 @@
 #include <tuple>
 
 class Physics {
+protected:
     static const float gravity;
     float velYo;    // Initial Y Velocity
     float velocity_y(float v0, int time);
