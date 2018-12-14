@@ -27,7 +27,6 @@ public:
     void Jump();
     void draw();
     virtual void Fall();
-    virtual void Jump();
 };
 
 #endif /* Bird_hpp */
