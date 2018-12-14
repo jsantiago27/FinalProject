@@ -23,7 +23,7 @@ Environment::Environment(int amount, const char* file, float pipe_offset): amoun
 //Function to create pipes
 void Environment::buildPipes(){
     
-    std::cout << "Building " << amount << " Top Pipes" << std::endl;
+   // std::cout << "Building " << amount << " Top Pipes" << std::endl;
     float randomHeight = 0;
     for(int i = 0; i < amount; i++){
         //Building top pipes
@@ -57,7 +57,7 @@ float Environment::generateHeight(float low, float high) {
 //Move the pipes at a set rate
 void Environment::move(float rate){
     
-    std::cout << "Moving Pipes " << std::endl;
+    //std::cout << "Moving Pipes " << std::endl;
     
     for(int i = 0; i < amount; i++){
         
@@ -66,7 +66,7 @@ void Environment::move(float rate){
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
-        std::cout << x << std::endl;
+        //std::cout << x << std::endl;
         
         bottomPipes[i]->setX(x - rate);
         
@@ -82,7 +82,7 @@ void Environment::move(float rate){
 
 //Draw pipes
 void Environment::drawPipes(){
-    std::cout << "Drawing Pipes " << std::endl;
+    //std::cout << "Drawing Pipes " << std::endl;
     
     for(int i = 0; i < amount; i++){
         topPipes[i]->draw(0.1);

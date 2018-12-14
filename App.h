@@ -52,7 +52,7 @@ public:
     void keyDown(unsigned char key, float x, float y);
     
     void leftMouseDown(float, float);
-    
+    void idle();
     ~App();
     
 };

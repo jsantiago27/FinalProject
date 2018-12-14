@@ -30,4 +30,13 @@ void Bird::draw() {
 
 void Bird::Jump() {
     velYo = 0.1;
+void Bird::Fall(){
+    //bird->setY(bird->getY() - 0.005) ;
+   // std::cout << bird->getY() <<  std::endl;
+
+}
+
+void Bird::Jump(){
+   // std::cout << "Jumping" << std::endl;
+   // bird->setY(bird->getY() + 4*0.005);
 }

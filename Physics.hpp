@@ -13,20 +13,19 @@
 
 class Physics {
 protected:
+class Physics
+{
     static const float gravity;
-    float velYo;    // Initial Y Velocity
+    float velYo; // Initial Y Velocity
     float velocity_y(float v0, int time);
-  
-public:
-    
+
+  public:
     Physics();
     ~Physics();
-    
+
     std::tuple<float> jump(float v0, float y, int time);
-    
 };
 #endif /* Physics_hpp */
-
 
 /*
  

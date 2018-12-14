@@ -26,6 +26,7 @@
 		905E66E621B5C218006753AE /* fireball.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = 905E66E521B5C218006753AE /* fireball.bmp */; };
 		905E66EA21B605FD006753AE /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905E66E821B605FD006753AE /* Environment.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		909FD3E421B7042100724B6D /* pipe2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909FD3E321B7042100724B6D /* pipe2.png */; };
+		90B4A84A21BAF4F00006A28C /* images in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FF0468D21B79D7000F48A64 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				5FE221A421C35D4900FDB8A7 /* images in CopyFiles */,
+				90B4A84A21BAF4F00006A28C /* images in CopyFiles */,
 				9019608821B70B82005D2974 /* back.png in CopyFiles */,
 				909FD3E421B7042100724B6D /* pipe2.png in CopyFiles */,
 				905E66E621B5C218006753AE /* fireball.bmp in CopyFiles */,
