@@ -7,14 +7,18 @@
 #include "Environment.hpp"
 #include "Bird.hpp"
 #include "Labels.hpp"
+#include <tuple>
+#include <utility>
 
 
 class App: public GlutApp {
     static int amount;
     static float rate;
     static float tube_gap;
+    static float speed;
     
-    static const char* pipeFile;
+    static const char* pipeFile1;
+    static const char* pipeFile2;
     static const char* background;
     static const char* miguel;
     static const char* daniel;
@@ -31,6 +35,7 @@ class App: public GlutApp {
     Bird* bird;
     
     std::vector<Labels*> menu;
+    std::vector<Labels*> endmenu;
     Labels* title;
     Labels* scoreBoard;
     
@@ -38,6 +43,7 @@ class App: public GlutApp {
     
     bool gameStarted;
     bool CSEVersion;
+    bool gameEnded;
     
     int score;
 
@@ -54,6 +60,12 @@ public:
     
     int getScore() const;
     void addScore();
+    
+    bool checkCollisions();
+    
+    void endGame();
+    
+    void ResetGame();
     
     void keyDown(unsigned char key, float x, float y);
     

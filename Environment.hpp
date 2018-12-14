@@ -31,18 +31,21 @@ public:
     std::deque<TexRect*> bottomPipes;
     
     float pipe_offset;
-    const char* pipe_image;
+    const char* pipe_image1;
+    const char* pipe_image2;
     int amount;
+    float rate;
+    float speed;
     
     Environment();
-    Environment(int, const char*, float);
+    Environment(int, const char*, const char*, float, float, float);
     
     void buildPipes();
     void addPipe();
     
     void resetPipes(TexRect* rect, float height);
     
-    void move(float);
+    void move();
     void drawPipes();
     float generateHeight(float, float);
     

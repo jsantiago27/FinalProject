@@ -20,6 +20,7 @@ class TexRect: public Rect {
 protected:
     GLuint texture_id;
     const char* file;
+    bool passed;
     
 public:
     TexRect(const char*, float, float, float, float);
@@ -27,6 +28,8 @@ public:
     void draw(float z) const;
     
     const char* getFile() const;
+    bool isPassed() const;
+    void setPassed(bool);
 };
 
 #endif

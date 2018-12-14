@@ -31,7 +31,7 @@ public:
     
     void setString(std::string);
     
-    void draw();
+    void draw(float);
     
 };
 

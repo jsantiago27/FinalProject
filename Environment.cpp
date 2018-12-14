@@ -9,12 +9,12 @@
 #include "Environment.hpp"
 
 //Constructors for the environment
-Environment::Environment() : amount(0),pipe_offset(0.4), pipe_image(" "){
+Environment::Environment() : amount(0),pipe_offset(0.4), pipe_image1(" "), pipe_image2(" "){
     buildPipes();
     drawPipes();
 }
 
-Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount),  pipe_offset(pipe_offset), pipe_image(file){
+Environment::Environment(int amount, const char* file, const char*  file2, float pipe_offset, float rate, float speed): amount(amount),  pipe_offset(pipe_offset), pipe_image1(file), pipe_image2(file2), rate(rate), speed(speed){
     buildPipes();
     drawPipes();
     
@@ -29,8 +29,8 @@ void Environment::buildPipes(){
         //Building top pipes
         // Generate random Height for each pipes
         randomHeight = generateHeight(-0.5, 0.5);
-        topPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), 2.0 - randomHeight, 0.5, 1.6));
-        bottomPipes.push_back(new TexRect(pipe_image, (3.0 + ((float)i*pipe_offset)), -2.0 - randomHeight, 0.5, -1.6) );
+        topPipes.push_back(new TexRect(pipe_image1, (3.0 + ((float)i*pipe_offset)), 2.0 - 0.5, 0.5, 1.6));
+        bottomPipes.push_back(new TexRect(pipe_image2, (3.0 + ((float)i*pipe_offset)), -0.8, 0.5, 1.6) );
     }
 }
 
@@ -39,6 +39,7 @@ void Environment::resetPipes(TexRect* rect, float height) {
     rect->setY(height);
     rect->setX(2.5);
     rect->setY(height);
+    rect->setPassed(false);
 }
 
 void Environment::addPipe(){
@@ -55,9 +56,11 @@ float Environment::generateHeight(float low, float high) {
 }
 
 //Move the pipes at a set rate
-void Environment::move(float rate){
+void Environment::move(){
     
     //std::cout << "Moving Pipes " << std::endl;
+    
+    rate += speed;
     
     for(int i = 0; i < amount; i++){
         
@@ -66,6 +69,7 @@ void Environment::move(float rate){
         topPipes[i]->setX(x - rate);
         x = bottomPipes[i]->getX();
         
+        //std::cout << bottomPipes[i]->getY() << std::endl;
         //std::cout << x << std::endl;
         
         bottomPipes[i]->setX(x - rate);
@@ -75,7 +79,7 @@ void Environment::move(float rate){
             float randomHeight = 0;
             randomHeight = generateHeight(-0.5, 0.5);
             resetPipes(topPipes[i], 2.0 - randomHeight);
-            resetPipes(bottomPipes[i], -2.0 - randomHeight);
+            resetPipes(bottomPipes[i], (topPipes[i]->getY() - topPipes[i]->getH()) - 0.8);
         }
     }
 }

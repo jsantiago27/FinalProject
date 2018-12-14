@@ -21,7 +21,7 @@ void Bird::move() {
     
     velYo += gravity;
     bird->setY(y + velYo);
-    std::cout<< bird->getY() << std::endl;
+    //std::cout<< bird->getY() << std::endl;
 }
 
 void Bird::draw() {
@@ -31,6 +31,20 @@ void Bird::draw() {
 float Bird::getX() const {
     return bird->getX();
 }
+
+float Bird::getY() const {
+    return bird->getY();
+}
+
+std::tuple<std::pair<float, float>, std::pair<float, float>, std::pair<float, float> , std::pair<float, float>> Bird::vertices() {
+    return std::make_tuple(
+                            std::pair<float, float>(bird->getX(), bird->getY()),                // Top Left
+                            std::pair<float, float>((bird->getX() + bird->getW()) , bird->getY() ), // Top right
+                            std::pair<float, float>(bird->getX(), (bird->getY() - bird->getH()) ),  // Bottom Left
+                            std::pair<float, float>((bird->getX()  + bird->getW()), (bird->getY() - bird->getH()))); // Bottom Right
+}
+
+
 
 void Bird::Jump() {
     velYo += lift;

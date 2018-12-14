@@ -6,6 +6,7 @@ TexRect::TexRect(const char* filename, float x=0, float y=0, float w=0.5, float 
     glShadeModel(GL_FLAT);
     glEnable(GL_DEPTH_TEST);
     file = filename;
+    passed = false;
     
     texture_id = SOIL_load_OGL_texture (
                                         filename,
@@ -54,5 +55,12 @@ void TexRect::draw(float z) const {
 
 const char* TexRect::getFile() const {
     return this->file;
+}
+
+bool TexRect::isPassed() const {
+    return passed;
+}
+void TexRect::setPassed(bool passed) {
+    this->passed = passed;
 }
 

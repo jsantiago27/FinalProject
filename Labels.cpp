@@ -17,12 +17,12 @@ Labels::~Labels() {
     
 }
 
-void Labels::draw() {
+void Labels::draw(float z) {
     
     glColor3f(0.0, 0.0, 0.0);
     std::string var = this->title;
     //set the position of the text in the window using the x and y coordinates
-    glRasterPos2f(x +  0.05, getCenterY());
+    glRasterPos3f(x +  0.05, getCenterY(), z);
     //get the length of the string to display
     //loop to display character by character
     for (int i = 0; i < var.length(); i++)
@@ -33,10 +33,10 @@ void Labels::draw() {
     glColor3f(r, g, b);
     glBegin(GL_POLYGON);
     
-    glVertex2f(x, y);
-    glVertex2f(x+w, y);
-    glVertex2f(x+w, y-h);
-    glVertex2f(x, y-h);
+    glVertex3f(x, y, z);
+    glVertex3f(x+w, y, z);
+    glVertex3f(x+w, y-h, z);
+    glVertex3f(x, y-h, z);
     
     glEnd();
 }
