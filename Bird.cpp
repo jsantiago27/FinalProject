@@ -28,6 +28,10 @@ void Bird::draw() {
     bird->draw(0.1);
 }
 
+float Bird::getX() const {
+    return bird->getX();
+}
+
 void Bird::Jump() {
     velYo += lift;
 }

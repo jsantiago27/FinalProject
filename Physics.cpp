@@ -12,27 +12,27 @@
 const float Physics::gravity = -0.00000025;
 
 
-    float Physics::velocity_y(float v0, int time)
-    {
-        return v0 + (gravity * time);
-    }
+float Physics::velocity_y(float v0, int time)
+{
+    return v0 + (gravity * time);
+}
 
-    Physics::Physics()
-    {
-        velYo = 0;
-    }
-    Physics::~Physics()
-    {
-    }
+Physics::Physics()
+{
+    velYo = 0;
+}
+Physics::~Physics()
+{
+}
 
-    std::tuple<float> Physics::jump(float initVel, float y, int time)
-    {
+std::tuple<float> Physics::jump(float initVel, float y, int time)
+{
 
-        float posY = 0;
+    float posY = 0;
 
-        velYo = initVel;
+    velYo = initVel;
 
-        posY = velocity_y(velYo, time);
+    posY = velocity_y(velYo, time);
 
-        return std::make_tuple(posY);
-    }
+    return std::make_tuple(posY);
+}
