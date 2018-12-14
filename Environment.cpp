@@ -14,7 +14,7 @@ Environment::Environment() : amount(0),pipe_offset(0.4), pipe_image(" "){
     drawPipes();
 }
 
-Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount), pipe_offset(pipe_offset), pipe_image(file){
+Environment::Environment(int amount, const char* file, float pipe_offset): amount(amount),  pipe_offset(pipe_offset), pipe_image(file){
     buildPipes();
     drawPipes();
     

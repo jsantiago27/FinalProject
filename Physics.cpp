@@ -2,24 +2,36 @@
 //  Physics.cpp
 //  glutapp
 //
-//  Created by Jefferson Santiago on 12/4/18.
+//  Created by Jefferson Santiago on 12/6/18.
 //  Copyright © 2018 Angelo Kyrilov. All rights reserved.
 //
 
 #include "Physics.hpp"
+const float Physics::gravity = -0.00005;
 
-Physics::Physics() : gravity(0.0005), positionY(0), velocityY(0) {
-}
+Physics::Physics() : gravity(0.0005), positionY(0), velocityY(0)
+{
+    float Physics::velocity_y(float v0, int time)
+    {
+        return v0 + (gravity * time);
+    }
 
-Physics::~Physics() {
-    
-}
+    Physics::Physics()
+    {
+        velYo = 0;
+    }
+    Physics::~Physics()
+    {
+    }
 
-void Physics::Update(float time) {
-    
-}
+    std::tuple<float> Physics::jump(float initVel, float y, int time)
+    {
 
+        float posY = 0;
 
-float Physics::getGravity() {
-    return gravity;
-}
+        velYo = initVel;
+
+        posY = velocity_y(velYo, time);
+
+        return std::make_tuple(posY);
+    }

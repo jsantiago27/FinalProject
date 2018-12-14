@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BE3DDA17-F918-42E2-B822-4C8A6EF632C9}</ProjectGuid>
     <RootNamespace>glutapp</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -118,7 +118,10 @@
     <ClCompile Include="..\AnimatedRect.cpp" />
     <ClCompile Include="..\App.cpp" />
     <ClCompile Include="..\app_main.cpp" />
+    <ClCompile Include="..\Bird.cpp" />
+    <ClCompile Include="..\Environment.cpp" />
     <ClCompile Include="..\GlutApp.cpp" />
+    <ClCompile Include="..\Physics.cpp" />
     <ClCompile Include="..\Rect.cpp" />
     <ClCompile Include="..\TexRect.cpp" />
     <ClCompile Include="..\Timer.cpp" />
@@ -130,7 +133,10 @@
   <ItemGroup>
     <ClInclude Include="..\AnimatedRect.h" />
     <ClInclude Include="..\App.h" />
+    <ClInclude Include="..\Bird.hpp" />
+    <ClInclude Include="..\Environment.hpp" />
     <ClInclude Include="..\GlutApp.h" />
+    <ClInclude Include="..\Physics.hpp" />
     <ClInclude Include="..\Rect.h" />
     <ClInclude Include="..\TexRect.h" />
     <ClInclude Include="..\Timer.h" />
