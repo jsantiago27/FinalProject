@@ -2,7 +2,7 @@
 #include "App.h"
 
 //Amount of Pipes
-int App::amount = 2;
+int App::amount = 8;
 
 //Rate at whihc the pipes move
 float App::rate = 0.0005;
@@ -14,9 +14,9 @@ float App::speed = 0.00000001;
 float App::tube_gap = 2.0;
 
 #if defined WIN32
-const char* App::pipeFile1 = "pipe1.png";
-const char* App::pipeFile2 = "pipe2.png";
-const char* App::background = "back.png";
+const char* App::pipeFile1 = "../pipe1.png";
+const char* App::pipeFile2 = "../pipe2.png";
+const char* App::background = "../back.png";
 const char* App::miguel = "../images/Miguel.png";
 const char* App::daniel = "../images/Daniel.png";
 const char* App::dongli = "../images/DongLi.png";
