@@ -58,7 +58,7 @@ App::App(int argc, char** argv): GlutApp(argc, argv){
     title = NULL;
     scoreBoard = NULL;
     explosion = NULL;
-    back = new TexRect(background, -1.3, 1.0, 2.5, 2.0);
+    back = new TexRect(background, -1.0, 1.0, 2.0, 2.0);
 
     
 }
